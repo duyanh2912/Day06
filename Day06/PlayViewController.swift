@@ -7,13 +7,14 @@
 //
 
 import Utils
+import CustomDrawing
 
 class PlayViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var imageView: CustomUIImageView!
     @IBOutlet var nameButtons: [CustomUIButton]!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var progressView: CircularProgressView!
     
     var gameTimer: Timer?
     
@@ -25,7 +26,7 @@ class PlayViewController: UIViewController {
         for button in nameButtons {
             button.addTarget(self, action: #selector(onClickAnswer(sender:)), for: .touchUpInside)
         }
-        self.timeLabel.text = dataModel.currentTime.description
+        self.progressView.progressPercentage = 0
         
         newPokemon()
         startCounting()
@@ -59,6 +60,7 @@ class PlayViewController: UIViewController {
                 timer.invalidate()
                 let ac = UIAlertController(title: "Time's up", message: "Score: \(self!.dataModel.score)", preferredStyle: .alert)
                 let ok = UIAlertAction(title: "Okay", style: .default) { _ in
+                    GameStats.shared.highScore = self!.dataModel.score
                     self!.performSegue(withIdentifier: "unwind", sender: nil)
                 }
                 ac.addAction(ok)
@@ -66,7 +68,8 @@ class PlayViewController: UIViewController {
                 return
             }
             self!.dataModel.currentTime -= 1
-            self!.timeLabel.text = self!.dataModel.currentTime.description
+            self!.progressView.progressPercentage = self!.dataModel.elapsedPercent
+            self!.progressView.setNeedsDisplay()
         }
     }
     

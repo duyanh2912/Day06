@@ -39,7 +39,7 @@ class DatabaseManager {
         var count = 0
         db.open()
         do {
-            let result = try db.executeQuery("Select count(*) as CountOfPokemons from pokemon", values: nil)
+            let result = try db.executeQuery("Select count(*) as CountOfPokemons from pokemon where gen=1", values: nil)
             while result.next() {
                 count = Int(result.int(forColumn: "CountOfPokemons"))
             }

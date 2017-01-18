@@ -14,7 +14,12 @@ class PlayModel {
     var selectedPokemonsID: [Int] = []
     var currentAnswers: [String] = []
     var currentPokemon: Pokemon!
-    var currentTime = 5
+    
+    var currentTime = GameStats.shared.playTime
+    var elapsedPercent: CGFloat {
+        return (1 - CGFloat(currentTime) / CGFloat(GameStats.shared.playTime))*100
+    }
+    
     var score = 0 {
         didSet {
             vc.scoreLabel.text = score.description

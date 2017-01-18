@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "1D45610827CEF36B0BEBBFEC01FA4F94D3BEDA5B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "1A4D633C88066773900E60358D68DF216FFE7EA4" : 9223372036854775807,
+    "1D45610827CEF36B0BEBBFEC01FA4F94D3BEDA5B" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F9B40985-16A8-4168-B129-81219981C319",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "1A4D633C88066773900E60358D68DF216FFE7EA4" : "..\/..\/Learning%20Swift\/Game%20Of%20Life",
+    "1D45610827CEF36B0BEBBFEC01FA4F94D3BEDA5B" : "Day06\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Day06",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Day06.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/duyanh2912\/Game-Of-Life.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1A4D633C88066773900E60358D68DF216FFE7EA4"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/duyanh2912\/Day06.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1D45610827CEF36B0BEBBFEC01FA4F94D3BEDA5B"
+    }
+  ]
+}

@@ -69,6 +69,18 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" image="Icon_Settings"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HIGH SCORE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agv-T2-gko">
+                                <rect key="frame" x="55" y="168" width="210.5" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25m-OF-bvX">
+                                <rect key="frame" x="140" y="79" width="40" height="79"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="66"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.58431372550000005" green="0.21960784310000001" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -76,25 +88,32 @@
                             <constraint firstItem="fDI-Vn-Wqf" firstAttribute="height" secondItem="xZi-I8-ijc" secondAttribute="height" multiplier="0.07" id="5q7-rn-b48"/>
                             <constraint firstAttribute="trailingMargin" secondItem="A3v-cj-fom" secondAttribute="trailing" id="DDr-Kh-zoB"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="I85-MC-VIf" secondAttribute="bottom" id="FM7-5s-aV1"/>
+                            <constraint firstItem="agv-T2-gko" firstAttribute="centerY" secondItem="25m-OF-bvX" secondAttribute="centerY" multiplier="1.6" id="LYy-nK-17f"/>
                             <constraint firstItem="A3v-cj-fom" firstAttribute="top" secondItem="Hcm-Ap-dca" secondAttribute="top" id="LnG-2g-wN9"/>
                             <constraint firstItem="xZi-I8-ijc" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1/3" id="OLy-YX-2GN"/>
                             <constraint firstItem="fDI-Vn-Wqf" firstAttribute="centerX" secondItem="xZi-I8-ijc" secondAttribute="centerX" id="UbI-md-tfR"/>
                             <constraint firstAttribute="trailing" secondItem="I85-MC-VIf" secondAttribute="trailing" id="VUZ-9N-y6u"/>
                             <constraint firstItem="fDI-Vn-Wqf" firstAttribute="centerY" secondItem="xZi-I8-ijc" secondAttribute="centerY" id="WQb-6Y-O6H"/>
                             <constraint firstItem="Hcm-Ap-dca" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="20" id="ZD8-aK-khk"/>
+                            <constraint firstItem="25m-OF-bvX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aPi-Qt-8PT"/>
+                            <constraint firstItem="agv-T2-gko" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ahP-15-wh1"/>
                             <constraint firstItem="I85-MC-VIf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eza-fk-kQO"/>
                             <constraint firstItem="Hcm-Ap-dca" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="j46-zA-o9p"/>
                             <constraint firstItem="fDI-Vn-Wqf" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="lsy-EL-gH7"/>
+                            <constraint firstItem="xZi-I8-ijc" firstAttribute="centerY" secondItem="agv-T2-gko" secondAttribute="centerY" multiplier="1.5" id="pRi-hv-N7S"/>
                             <constraint firstItem="I85-MC-VIf" firstAttribute="top" secondItem="fDI-Vn-Wqf" secondAttribute="top" id="riW-cl-GqT"/>
                             <constraint firstItem="xZi-I8-ijc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ybS-y3-QC5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MQS-DE-jMw"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="scoreLabel" destination="25m-OF-bvX" id="Y4U-gv-gHu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3893.5999999999999" y="103.89805097451276"/>
+            <point key="canvasLocation" x="3892.5" y="103.52112676056338"/>
         </scene>
         <!--Play View Controller-->
         <scene sceneID="5Pl-3K-gme">
@@ -228,28 +247,40 @@
                                     <segue destination="iXE-Vq-jO9" kind="unwind" identifier="unwind" unwindAction="unwindToBaseWithSegue:" id="oyX-Mh-Clb"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMh-fj-Ai0">
-                                <rect key="frame" x="262" y="20" width="42" height="41"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view opaque="NO" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="y8t-wM-86v" customClass="CircularProgressView" customModule="CustomDrawing">
+                                <rect key="frame" x="260" y="20" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="y8t-wM-86v" secondAttribute="height" id="ymM-fa-Qoc"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="unfilledColor">
+                                        <color key="value" red="0.942105402598996" green="0.95686274510000002" blue="0.94863471267656962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progressPercentage">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.8145647278" blue="0.38470708460000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="pOU-8Z-Qc7" firstAttribute="top" secondItem="UQA-tE-SHH" secondAttribute="top" constant="5" id="69p-Q9-0yv"/>
                             <constraint firstItem="UQA-tE-SHH" firstAttribute="top" secondItem="Tia-AX-nxy" secondAttribute="bottom" multiplier="1.2" id="AUH-84-pCG"/>
-                            <constraint firstItem="LMh-fj-Ai0" firstAttribute="trailing" secondItem="UQA-tE-SHH" secondAttribute="trailing" id="Cxc-r8-jCE"/>
-                            <constraint firstItem="LMh-fj-Ai0" firstAttribute="top" secondItem="WuL-2q-Fch" secondAttribute="top" id="EId-Nm-Cy3"/>
+                            <constraint firstItem="y8t-wM-86v" firstAttribute="top" secondItem="WuL-2q-Fch" secondAttribute="top" id="ENr-MB-YUj"/>
                             <constraint firstItem="Hb0-02-tdC" firstAttribute="leading" secondItem="cdE-xE-fuS" secondAttribute="leadingMargin" id="L5w-xA-dNz"/>
                             <constraint firstItem="Hb0-02-tdC" firstAttribute="top" secondItem="UQA-tE-SHH" secondAttribute="bottom" multiplier="1.1" id="QOm-tq-NJU"/>
                             <constraint firstItem="WuL-2q-Fch" firstAttribute="top" secondItem="cdE-xE-fuS" secondAttribute="topMargin" constant="20" id="VU2-l7-naO"/>
                             <constraint firstItem="Tia-AX-nxy" firstAttribute="top" secondItem="cdE-xE-fuS" secondAttribute="top" constant="50" id="Yc2-YH-36o"/>
                             <constraint firstItem="UQA-tE-SHH" firstAttribute="centerX" secondItem="cdE-xE-fuS" secondAttribute="centerX" id="blF-R9-JR2"/>
+                            <constraint firstItem="y8t-wM-86v" firstAttribute="height" secondItem="WuL-2q-Fch" secondAttribute="height" id="jAs-Fi-cKN"/>
                             <constraint firstItem="UQA-tE-SHH" firstAttribute="leading" secondItem="Hb0-02-tdC" secondAttribute="leading" id="krW-9Q-bla"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Hb0-02-tdC" secondAttribute="trailing" id="kuV-Uz-GPM"/>
                             <constraint firstItem="qwD-Gs-1BE" firstAttribute="top" secondItem="Hb0-02-tdC" secondAttribute="bottom" multiplier="1.1" id="mDC-bY-3aW"/>
                             <constraint firstItem="pOU-8Z-Qc7" firstAttribute="leading" secondItem="UQA-tE-SHH" secondAttribute="leading" constant="10" id="mrA-6w-CLg"/>
+                            <constraint firstItem="y8t-wM-86v" firstAttribute="trailing" secondItem="UQA-tE-SHH" secondAttribute="trailing" id="rvS-H7-RAg"/>
                             <constraint firstItem="Tia-AX-nxy" firstAttribute="centerX" secondItem="cdE-xE-fuS" secondAttribute="centerX" id="xne-Sa-QW7"/>
                             <constraint firstItem="WuL-2q-Fch" firstAttribute="leading" secondItem="UQA-tE-SHH" secondAttribute="leading" constant="-10" id="zgG-Jk-VBz"/>
                         </constraints>
@@ -259,8 +290,8 @@
                     <connections>
                         <outlet property="imageView" destination="UQA-tE-SHH" id="06L-cf-Vi0"/>
                         <outlet property="nameLabel" destination="pOU-8Z-Qc7" id="cP5-e9-NlA"/>
+                        <outlet property="progressView" destination="y8t-wM-86v" id="Cme-nM-nKI"/>
                         <outlet property="scoreLabel" destination="Tia-AX-nxy" id="axJ-yY-iYr"/>
-                        <outlet property="timeLabel" destination="LMh-fj-Ai0" id="aby-BE-Qxh"/>
                         <outletCollection property="nameButtons" destination="YcS-ua-E3B" collectionClass="NSMutableArray" id="X4Y-Hm-asP"/>
                         <outletCollection property="nameButtons" destination="XJ6-xg-yhW" collectionClass="NSMutableArray" id="hvH-pe-CXo"/>
                         <outletCollection property="nameButtons" destination="hYJ-Qn-x9W" collectionClass="NSMutableArray" id="ibS-9q-IGZ"/>

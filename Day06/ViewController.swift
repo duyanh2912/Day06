@@ -9,14 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var scoreLabel: UILabel!
+    
     override func viewWillAppear(_ animated: Bool) {
-        navigationController?.navigationBar.isHidden = true
+        scoreLabel.text = GameStats.shared.highScore.description
     }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        navigationController?.navigationBar.isHidden = false
-    }
-    
     @IBAction func unwindToBase(segue: UIStoryboardSegue) {
         
     }
