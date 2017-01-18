@@ -11,12 +11,14 @@ import CustomDrawing
 
 class PlayViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
-    @IBOutlet weak var imageView: CustomUIImageView!        // Utils
     @IBOutlet var nameButtons: [CustomUIButton]!            // Utils
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var progressView: CircularProgressView!  // Custom Drawing
-    
+    @IBOutlet weak var cardHolderView: UIView!
     var gameTimer: Timer?
+    
+    var frontImage: UIImageView = UIImageView(image: nil)
+    var backImage: UIImageView! = UIImageView(image: nil)
     
     let dataModel = PlayModel()
     
@@ -40,14 +42,28 @@ class PlayViewController: UIViewController {
                 button.backgroundColor = UIColor(colorLiteralRed: 142/255, green: 212/255, blue: 53/255, alpha: 1)
             }
         }
-        nameLabel.isHidden = false
-        imageView.blendAlpha = 0
+        
+        UIView.transition(from: frontImage, to: backImage, duration: 0.5, options: .transitionFlipFromLeft) { [unowned self] _ in
+            self.nameLabel.isHidden = false
+        }
         
         view.isUserInteractionEnabled = false
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { [weak self] in
             self?.newPokemon()
             self?.view.isUserInteractionEnabled = true
         }
+    }
+    
+    func setupImage() {
+        for sub in cardHolderView.subviews { sub.removeFromSuperview() }
+        frontImage.image = UIImage(named: dataModel.currentPokemon.img)!.withRenderingMode(.alwaysTemplate)
+        frontImage.frame = CGRect(origin: .zero, size: cardHolderView.frame.size)
+        frontImage.tintColor = .black
+        
+        backImage.image = UIImage(named: dataModel.currentPokemon.img)
+        backImage.frame = CGRect(origin: .zero, size: cardHolderView.frame.size)
+        
+        cardHolderView.addSubview(frontImage)
     }
     
     func startCounting() {
@@ -81,15 +97,11 @@ class PlayViewController: UIViewController {
         nameLabel.isHidden = true
         nameLabel.text = dataModel.currentPokemon.tag + "-" + dataModel.currentPokemon.name
         
-        imageView.changeImage(UIImage(named: dataModel.currentPokemon.img)!)
-        imageView.blendMode = 1
-        imageView.blendColor = .black
-        imageView.blendAlpha = 1
-        
         view.backgroundColor = UIColor(dataModel.currentPokemon.color)
         
         for i in 0 ..< nameButtons.count {
             nameButtons[i].setTitle(dataModel.currentAnswers[i], for: .normal)
         }
+        setupImage()
     }
 }

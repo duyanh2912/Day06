@@ -28,6 +28,7 @@
 		5001BEC71E2F473E00116B2E /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001BEC01E2F473E00116B2E /* UIImage.swift */; };
 		5001BEC81E2F473E00116B2E /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001BEC11E2F473E00116B2E /* UIImageView.swift */; };
 		5001BEC91E2F473E00116B2E /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001BEC21E2F473E00116B2E /* UIView.swift */; };
+		5001BECB1E2F635000116B2E /* Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50AD778E1E2DDBB500B57D58 /* Utils.framework */; };
 		5037F1B71E2B516C00A45703 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5037F1B61E2B516C00A45703 /* AppDelegate.swift */; };
 		5037F1B91E2B516C00A45703 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5037F1B81E2B516C00A45703 /* ViewController.swift */; };
 		5037F1BC1E2B516C00A45703 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5037F1BA1E2B516C00A45703 /* Main.storyboard */; };
@@ -52,6 +53,8 @@
 		5071495F1E2F2F70001187BF /* CustomDrawing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 507149581E2F2F70001187BF /* CustomDrawing.framework */; };
 		507149601E2F2F70001187BF /* CustomDrawing.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 507149581E2F2F70001187BF /* CustomDrawing.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		507149651E2F2F92001187BF /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507149641E2F2F92001187BF /* CircularProgressView.swift */; };
+		509A883D1E2F66C4004D4A5E /* PoplarStd.otf in Resources */ = {isa = PBXBuildFile; fileRef = 509A883B1E2F66C4004D4A5E /* PoplarStd.otf */; };
+		509A883E1E2F66C4004D4A5E /* StencilStd.otf in Resources */ = {isa = PBXBuildFile; fileRef = 509A883C1E2F66C4004D4A5E /* StencilStd.otf */; };
 		509F245B1E2F0AF50022A558 /* GameStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509F245A1E2F0AF50022A558 /* GameStats.swift */; };
 		50AD77921E2DDBB500B57D58 /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 50AD77901E2DDBB500B57D58 /* Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50AD77951E2DDBB500B57D58 /* Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50AD778E1E2DDBB500B57D58 /* Utils.framework */; };
@@ -895,6 +898,8 @@
 		5071495A1E2F2F70001187BF /* CustomDrawing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomDrawing.h; sourceTree = "<group>"; };
 		5071495B1E2F2F70001187BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		507149641E2F2F92001187BF /* CircularProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		509A883B1E2F66C4004D4A5E /* PoplarStd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PoplarStd.otf; sourceTree = "<group>"; };
+		509A883C1E2F66C4004D4A5E /* StencilStd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = StencilStd.otf; sourceTree = "<group>"; };
 		509F245A1E2F0AF50022A558 /* GameStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStats.swift; sourceTree = "<group>"; };
 		50AD778E1E2DDBB500B57D58 /* Utils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Utils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50AD77901E2DDBB500B57D58 /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
@@ -1672,6 +1677,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5001BECB1E2F635000116B2E /* Utils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1769,6 +1775,7 @@
 			children = (
 				50AD7D9A1E2E12D200B57D58 /* Database Manager */,
 				50AD77C91E2DDD6900B57D58 /* images */,
+				509A883A1E2F66C4004D4A5E /* Fonts */,
 				5037F1B61E2B516C00A45703 /* AppDelegate.swift */,
 				5037F1B81E2B516C00A45703 /* ViewController.swift */,
 				505578A91E2E2369008C6E69 /* PlayViewController.swift */,
@@ -1820,6 +1827,15 @@
 				507149641E2F2F92001187BF /* CircularProgressView.swift */,
 			);
 			path = CustomDrawing;
+			sourceTree = "<group>";
+		};
+		509A883A1E2F66C4004D4A5E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				509A883B1E2F66C4004D4A5E /* PoplarStd.otf */,
+				509A883C1E2F66C4004D4A5E /* StencilStd.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		50AD778F1E2DDBB500B57D58 /* Utils */ = {
@@ -3112,6 +3128,7 @@
 				50AD7D191E2DDD7000B57D58 /* Staryu.png in Resources */,
 				50AD7C581E2DDD6F00B57D58 /* Muk.png in Resources */,
 				50AD7D1B1E2DDD7000B57D58 /* Stoutland.png in Resources */,
+				509A883D1E2F66C4004D4A5E /* PoplarStd.otf in Resources */,
 				50AD7B301E2DDD6F00B57D58 /* Cutiefly.png in Resources */,
 				50AD7D3E1E2DDD7000B57D58 /* Togepi.png in Resources */,
 				50AD7D871E2DDD7000B57D58 /* Yamask.png in Resources */,
@@ -3202,6 +3219,7 @@
 				50AD7CF11E2DDD6F00B57D58 /* Skarmory.png in Resources */,
 				50AD7C3D1E2DDD6F00B57D58 /* Meditite.png in Resources */,
 				50AD7B771E2DDD6F00B57D58 /* Ferrothorn.png in Resources */,
+				509A883E1E2F66C4004D4A5E /* StencilStd.otf in Resources */,
 				50AD7CAF1E2DDD6F00B57D58 /* Rattata.png in Resources */,
 				50AD7BB01E2DDD6F00B57D58 /* Greninja.png in Resources */,
 				50AD7BF41E2DDD6F00B57D58 /* Komala.png in Resources */,
