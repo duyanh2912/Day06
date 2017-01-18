@@ -7,6 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5001BEAD1E2F471F00116B2E /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001BE9C1E2F471F00116B2E /* CGFloat.swift */; };
+		5001BEAE1E2F471F00116B2E /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001BE9D1E2F471F00116B2E /* CGPoint.swift */; };
+		5001BEAF1E2F471F00116B2E /* CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001BE9E1E2F471F00116B2E /* CGRect.swift */; };
+		5001BEB01E2F471F00116B2E /* CGSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001BE9F1E2F471F00116B2E /* CGSize.swift */; };
+		5001BEB11E2F471F00116B2E /* CGVector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001BEA01E2F471F00116B2E /* CGVector.swift */; };
+		5001BEB21E2F471F00116B2E /* GKGraphNode2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001BEA21E2F471F00116B2E /* GKGraphNode2D.swift */; };
+		5001BEB31E2F471F00116B2E /* SKNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001BEA41E2F471F00116B2E /* SKNode.swift */; };
+		5001BEB41E2F471F00116B2E /* SKSpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001BEA51E2F471F00116B2E /* SKSpriteNode.swift */; };
+		5001BEB51E2F471F00116B2E /* SKTextureAtlas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001BEA61E2F471F00116B2E /* SKTextureAtlas.swift */; };
+		5001BEB61E2F471F00116B2E /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001BEA81E2F471F00116B2E /* Configuration.swift */; };
+		5001BEB71E2F471F00116B2E /* TouchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001BEA91E2F471F00116B2E /* TouchView.swift */; };
+		5001BEB81E2F471F00116B2E /* TouchVisualizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 5001BEAA1E2F471F00116B2E /* TouchVisualizer.h */; };
+		5001BEB91E2F471F00116B2E /* UIWindow+Swizzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001BEAB1E2F471F00116B2E /* UIWindow+Swizzle.swift */; };
+		5001BEBA1E2F471F00116B2E /* Visualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001BEAC1E2F471F00116B2E /* Visualizer.swift */; };
+		5001BEC31E2F473E00116B2E /* GifUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001BEBC1E2F473E00116B2E /* GifUIImageView.swift */; };
+		5001BEC41E2F473E00116B2E /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001BEBD1E2F473E00116B2E /* UIButton.swift */; };
+		5001BEC51E2F473E00116B2E /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001BEBE1E2F473E00116B2E /* UIColor.swift */; };
+		5001BEC61E2F473E00116B2E /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001BEBF1E2F473E00116B2E /* UIColorExtension.swift */; };
+		5001BEC71E2F473E00116B2E /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001BEC01E2F473E00116B2E /* UIImage.swift */; };
+		5001BEC81E2F473E00116B2E /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001BEC11E2F473E00116B2E /* UIImageView.swift */; };
+		5001BEC91E2F473E00116B2E /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001BEC21E2F473E00116B2E /* UIView.swift */; };
 		5037F1B71E2B516C00A45703 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5037F1B61E2B516C00A45703 /* AppDelegate.swift */; };
 		5037F1B91E2B516C00A45703 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5037F1B81E2B516C00A45703 /* ViewController.swift */; };
 		5037F1BC1E2B516C00A45703 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5037F1BA1E2B516C00A45703 /* Main.storyboard */; };
@@ -35,25 +56,6 @@
 		50AD77921E2DDBB500B57D58 /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 50AD77901E2DDBB500B57D58 /* Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50AD77951E2DDBB500B57D58 /* Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50AD778E1E2DDBB500B57D58 /* Utils.framework */; };
 		50AD77961E2DDBB500B57D58 /* Utils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50AD778E1E2DDBB500B57D58 /* Utils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		50AD77B31E2DDBF600B57D58 /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AD779B1E2DDBF600B57D58 /* CGFloat.swift */; };
-		50AD77B41E2DDBF600B57D58 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AD779C1E2DDBF600B57D58 /* CGPoint.swift */; };
-		50AD77B51E2DDBF600B57D58 /* CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AD779D1E2DDBF600B57D58 /* CGRect.swift */; };
-		50AD77B61E2DDBF600B57D58 /* CGSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AD779E1E2DDBF600B57D58 /* CGSize.swift */; };
-		50AD77B71E2DDBF600B57D58 /* CGVector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AD779F1E2DDBF600B57D58 /* CGVector.swift */; };
-		50AD77B81E2DDBF600B57D58 /* GKGraphNode2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AD77A11E2DDBF600B57D58 /* GKGraphNode2D.swift */; };
-		50AD77B91E2DDBF600B57D58 /* SKNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AD77A31E2DDBF600B57D58 /* SKNode.swift */; };
-		50AD77BA1E2DDBF600B57D58 /* SKSpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AD77A41E2DDBF600B57D58 /* SKSpriteNode.swift */; };
-		50AD77BB1E2DDBF600B57D58 /* SKTextureAtlas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AD77A51E2DDBF600B57D58 /* SKTextureAtlas.swift */; };
-		50AD77BC1E2DDBF600B57D58 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AD77A71E2DDBF600B57D58 /* Configuration.swift */; };
-		50AD77BD1E2DDBF600B57D58 /* TouchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AD77A81E2DDBF600B57D58 /* TouchView.swift */; };
-		50AD77BE1E2DDBF600B57D58 /* TouchVisualizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 50AD77A91E2DDBF600B57D58 /* TouchVisualizer.h */; };
-		50AD77BF1E2DDBF700B57D58 /* UIWindow+Swizzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AD77AA1E2DDBF600B57D58 /* UIWindow+Swizzle.swift */; };
-		50AD77C01E2DDBF700B57D58 /* Visualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AD77AB1E2DDBF600B57D58 /* Visualizer.swift */; };
-		50AD77C11E2DDBF700B57D58 /* GifUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AD77AD1E2DDBF600B57D58 /* GifUIImageView.swift */; };
-		50AD77C21E2DDBF700B57D58 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AD77AE1E2DDBF600B57D58 /* UIButton.swift */; };
-		50AD77C31E2DDBF700B57D58 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AD77AF1E2DDBF600B57D58 /* UIColor.swift */; };
-		50AD77C41E2DDBF700B57D58 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AD77B01E2DDBF600B57D58 /* UIImage.swift */; };
-		50AD77C61E2DDBF700B57D58 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AD77B21E2DDBF600B57D58 /* UIView.swift */; };
 		50AD7AB01E2DDD6F00B57D58 /* Abomasnow.png in Resources */ = {isa = PBXBuildFile; fileRef = 50AD77CA1E2DDD6900B57D58 /* Abomasnow.png */; };
 		50AD7AB11E2DDD6F00B57D58 /* Abra.png in Resources */ = {isa = PBXBuildFile; fileRef = 50AD77CB1E2DDD6900B57D58 /* Abra.png */; };
 		50AD7AB21E2DDD6F00B57D58 /* Absol.png in Resources */ = {isa = PBXBuildFile; fileRef = 50AD77CC1E2DDD6900B57D58 /* Absol.png */; };
@@ -796,13 +798,11 @@
 		50AD7D931E2DDD7000B57D58 /* Zubat.png in Resources */ = {isa = PBXBuildFile; fileRef = 50AD7AAD1E2DDD6F00B57D58 /* Zubat.png */; };
 		50AD7D941E2DDD7000B57D58 /* Zweilous.png in Resources */ = {isa = PBXBuildFile; fileRef = 50AD7AAE1E2DDD6F00B57D58 /* Zweilous.png */; };
 		50AD7D951E2DDD7000B57D58 /* Zygarde.png in Resources */ = {isa = PBXBuildFile; fileRef = 50AD7AAF1E2DDD6F00B57D58 /* Zygarde.png */; };
-		50AD7D971E2DF05600B57D58 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AD7D961E2DF05600B57D58 /* UIImageView.swift */; };
 		50AD7D9D1E2E12D200B57D58 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AD7D9B1E2E12D200B57D58 /* DatabaseManager.swift */; };
 		50AD7D9E1E2E12D200B57D58 /* pokemon.db in Resources */ = {isa = PBXBuildFile; fileRef = 50AD7D9C1E2E12D200B57D58 /* pokemon.db */; };
 		50AD7DB31E2E13EF00B57D58 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 50AD7DB21E2E13EF00B57D58 /* libsqlite3.0.tbd */; };
 		50EE3DD21E2E668800E4C45A /* PlayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EE3DD11E2E668800E4C45A /* PlayModel.swift */; };
 		50EE3DD41E2E6F5600E4C45A /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EE3DD31E2E6F5600E4C45A /* Pokemon.swift */; };
-		50EE3DD81E2E79C800E4C45A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EE3DD71E2E79C800E4C45A /* UIColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -846,6 +846,27 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5001BE9C1E2F471F00116B2E /* CGFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloat.swift; sourceTree = "<group>"; };
+		5001BE9D1E2F471F00116B2E /* CGPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPoint.swift; sourceTree = "<group>"; };
+		5001BE9E1E2F471F00116B2E /* CGRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRect.swift; sourceTree = "<group>"; };
+		5001BE9F1E2F471F00116B2E /* CGSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSize.swift; sourceTree = "<group>"; };
+		5001BEA01E2F471F00116B2E /* CGVector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGVector.swift; sourceTree = "<group>"; };
+		5001BEA21E2F471F00116B2E /* GKGraphNode2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKGraphNode2D.swift; sourceTree = "<group>"; };
+		5001BEA41E2F471F00116B2E /* SKNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKNode.swift; sourceTree = "<group>"; };
+		5001BEA51E2F471F00116B2E /* SKSpriteNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKSpriteNode.swift; sourceTree = "<group>"; };
+		5001BEA61E2F471F00116B2E /* SKTextureAtlas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTextureAtlas.swift; sourceTree = "<group>"; };
+		5001BEA81E2F471F00116B2E /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		5001BEA91E2F471F00116B2E /* TouchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchView.swift; sourceTree = "<group>"; };
+		5001BEAA1E2F471F00116B2E /* TouchVisualizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchVisualizer.h; sourceTree = "<group>"; };
+		5001BEAB1E2F471F00116B2E /* UIWindow+Swizzle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+Swizzle.swift"; sourceTree = "<group>"; };
+		5001BEAC1E2F471F00116B2E /* Visualizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Visualizer.swift; sourceTree = "<group>"; };
+		5001BEBC1E2F473E00116B2E /* GifUIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifUIImageView.swift; sourceTree = "<group>"; };
+		5001BEBD1E2F473E00116B2E /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		5001BEBE1E2F473E00116B2E /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		5001BEBF1E2F473E00116B2E /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		5001BEC01E2F473E00116B2E /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		5001BEC11E2F473E00116B2E /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		5001BEC21E2F473E00116B2E /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		5037F1B31E2B516C00A45703 /* Day06.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Day06.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5037F1B61E2B516C00A45703 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5037F1B81E2B516C00A45703 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -878,25 +899,6 @@
 		50AD778E1E2DDBB500B57D58 /* Utils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Utils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50AD77901E2DDBB500B57D58 /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		50AD77911E2DDBB500B57D58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		50AD779B1E2DDBF600B57D58 /* CGFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloat.swift; sourceTree = "<group>"; };
-		50AD779C1E2DDBF600B57D58 /* CGPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPoint.swift; sourceTree = "<group>"; };
-		50AD779D1E2DDBF600B57D58 /* CGRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRect.swift; sourceTree = "<group>"; };
-		50AD779E1E2DDBF600B57D58 /* CGSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSize.swift; sourceTree = "<group>"; };
-		50AD779F1E2DDBF600B57D58 /* CGVector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGVector.swift; sourceTree = "<group>"; };
-		50AD77A11E2DDBF600B57D58 /* GKGraphNode2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKGraphNode2D.swift; sourceTree = "<group>"; };
-		50AD77A31E2DDBF600B57D58 /* SKNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKNode.swift; sourceTree = "<group>"; };
-		50AD77A41E2DDBF600B57D58 /* SKSpriteNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKSpriteNode.swift; sourceTree = "<group>"; };
-		50AD77A51E2DDBF600B57D58 /* SKTextureAtlas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTextureAtlas.swift; sourceTree = "<group>"; };
-		50AD77A71E2DDBF600B57D58 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
-		50AD77A81E2DDBF600B57D58 /* TouchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchView.swift; sourceTree = "<group>"; };
-		50AD77A91E2DDBF600B57D58 /* TouchVisualizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchVisualizer.h; sourceTree = "<group>"; };
-		50AD77AA1E2DDBF600B57D58 /* UIWindow+Swizzle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+Swizzle.swift"; sourceTree = "<group>"; };
-		50AD77AB1E2DDBF600B57D58 /* Visualizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Visualizer.swift; sourceTree = "<group>"; };
-		50AD77AD1E2DDBF600B57D58 /* GifUIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifUIImageView.swift; sourceTree = "<group>"; };
-		50AD77AE1E2DDBF600B57D58 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
-		50AD77AF1E2DDBF600B57D58 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
-		50AD77B01E2DDBF600B57D58 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
-		50AD77B21E2DDBF600B57D58 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		50AD77CA1E2DDD6900B57D58 /* Abomasnow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Abomasnow.png; sourceTree = "<group>"; };
 		50AD77CB1E2DDD6900B57D58 /* Abra.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Abra.png; sourceTree = "<group>"; };
 		50AD77CC1E2DDD6900B57D58 /* Absol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Absol.png; sourceTree = "<group>"; };
@@ -1639,13 +1641,11 @@
 		50AD7AAD1E2DDD6F00B57D58 /* Zubat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Zubat.png; sourceTree = "<group>"; };
 		50AD7AAE1E2DDD6F00B57D58 /* Zweilous.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Zweilous.png; sourceTree = "<group>"; };
 		50AD7AAF1E2DDD6F00B57D58 /* Zygarde.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Zygarde.png; sourceTree = "<group>"; };
-		50AD7D961E2DF05600B57D58 /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		50AD7D9B1E2E12D200B57D58 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		50AD7D9C1E2E12D200B57D58 /* pokemon.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = pokemon.db; sourceTree = "<group>"; };
 		50AD7DB21E2E13EF00B57D58 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		50EE3DD11E2E668800E4C45A /* PlayModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayModel.swift; sourceTree = "<group>"; };
 		50EE3DD31E2E6F5600E4C45A /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Pokemon.swift; path = ../Pokemon.swift; sourceTree = "<group>"; };
-		50EE3DD71E2E79C800E4C45A /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1685,6 +1685,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5001BE9B1E2F471F00116B2E /* CoreGraphics */ = {
+			isa = PBXGroup;
+			children = (
+				5001BE9C1E2F471F00116B2E /* CGFloat.swift */,
+				5001BE9D1E2F471F00116B2E /* CGPoint.swift */,
+				5001BE9E1E2F471F00116B2E /* CGRect.swift */,
+				5001BE9F1E2F471F00116B2E /* CGSize.swift */,
+				5001BEA01E2F471F00116B2E /* CGVector.swift */,
+			);
+			path = CoreGraphics;
+			sourceTree = "<group>";
+		};
+		5001BEA11E2F471F00116B2E /* GameplayKit */ = {
+			isa = PBXGroup;
+			children = (
+				5001BEA21E2F471F00116B2E /* GKGraphNode2D.swift */,
+			);
+			path = GameplayKit;
+			sourceTree = "<group>";
+		};
+		5001BEA31E2F471F00116B2E /* SpriteKit */ = {
+			isa = PBXGroup;
+			children = (
+				5001BEA41E2F471F00116B2E /* SKNode.swift */,
+				5001BEA51E2F471F00116B2E /* SKSpriteNode.swift */,
+				5001BEA61E2F471F00116B2E /* SKTextureAtlas.swift */,
+			);
+			path = SpriteKit;
+			sourceTree = "<group>";
+		};
+		5001BEA71E2F471F00116B2E /* TouchVisualizer */ = {
+			isa = PBXGroup;
+			children = (
+				5001BEA81E2F471F00116B2E /* Configuration.swift */,
+				5001BEA91E2F471F00116B2E /* TouchView.swift */,
+				5001BEAA1E2F471F00116B2E /* TouchVisualizer.h */,
+				5001BEAB1E2F471F00116B2E /* UIWindow+Swizzle.swift */,
+				5001BEAC1E2F471F00116B2E /* Visualizer.swift */,
+			);
+			path = TouchVisualizer;
+			sourceTree = "<group>";
+		};
+		5001BEBB1E2F473E00116B2E /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				5001BEBC1E2F473E00116B2E /* GifUIImageView.swift */,
+				5001BEBD1E2F473E00116B2E /* UIButton.swift */,
+				5001BEBE1E2F473E00116B2E /* UIColor.swift */,
+				5001BEBF1E2F473E00116B2E /* UIColorExtension.swift */,
+				5001BEC01E2F473E00116B2E /* UIImage.swift */,
+				5001BEC11E2F473E00116B2E /* UIImageView.swift */,
+				5001BEC21E2F473E00116B2E /* UIView.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
 		5037F1AA1E2B516C00A45703 = {
 			isa = PBXGroup;
 			children = (
@@ -1769,76 +1825,15 @@
 		50AD778F1E2DDBB500B57D58 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				50AD779A1E2DDBF600B57D58 /* CoreGraphics */,
-				50AD77A01E2DDBF600B57D58 /* GameplayKit */,
-				50AD77A21E2DDBF600B57D58 /* SpriteKit */,
-				50AD77A61E2DDBF600B57D58 /* TouchVisualizer */,
-				50AD77AC1E2DDBF600B57D58 /* UIKit */,
+				5001BE9B1E2F471F00116B2E /* CoreGraphics */,
+				5001BEA11E2F471F00116B2E /* GameplayKit */,
+				5001BEA31E2F471F00116B2E /* SpriteKit */,
+				5001BEA71E2F471F00116B2E /* TouchVisualizer */,
+				5001BEBB1E2F473E00116B2E /* UIKit */,
 				50AD77901E2DDBB500B57D58 /* Utils.h */,
 				50AD77911E2DDBB500B57D58 /* Info.plist */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		50AD779A1E2DDBF600B57D58 /* CoreGraphics */ = {
-			isa = PBXGroup;
-			children = (
-				50AD779B1E2DDBF600B57D58 /* CGFloat.swift */,
-				50AD779C1E2DDBF600B57D58 /* CGPoint.swift */,
-				50AD779D1E2DDBF600B57D58 /* CGRect.swift */,
-				50AD779E1E2DDBF600B57D58 /* CGSize.swift */,
-				50AD779F1E2DDBF600B57D58 /* CGVector.swift */,
-			);
-			name = CoreGraphics;
-			path = "../../../../Learning Swift/Game Of Life/Utils/CoreGraphics";
-			sourceTree = "<group>";
-		};
-		50AD77A01E2DDBF600B57D58 /* GameplayKit */ = {
-			isa = PBXGroup;
-			children = (
-				50AD77A11E2DDBF600B57D58 /* GKGraphNode2D.swift */,
-			);
-			name = GameplayKit;
-			path = "../../../../Learning Swift/Game Of Life/Utils/GameplayKit";
-			sourceTree = "<group>";
-		};
-		50AD77A21E2DDBF600B57D58 /* SpriteKit */ = {
-			isa = PBXGroup;
-			children = (
-				50AD77A31E2DDBF600B57D58 /* SKNode.swift */,
-				50AD77A41E2DDBF600B57D58 /* SKSpriteNode.swift */,
-				50AD77A51E2DDBF600B57D58 /* SKTextureAtlas.swift */,
-			);
-			name = SpriteKit;
-			path = "../../../../Learning Swift/Game Of Life/Utils/SpriteKit";
-			sourceTree = "<group>";
-		};
-		50AD77A61E2DDBF600B57D58 /* TouchVisualizer */ = {
-			isa = PBXGroup;
-			children = (
-				50AD77A71E2DDBF600B57D58 /* Configuration.swift */,
-				50AD77A81E2DDBF600B57D58 /* TouchView.swift */,
-				50AD77A91E2DDBF600B57D58 /* TouchVisualizer.h */,
-				50AD77AA1E2DDBF600B57D58 /* UIWindow+Swizzle.swift */,
-				50AD77AB1E2DDBF600B57D58 /* Visualizer.swift */,
-			);
-			name = TouchVisualizer;
-			path = "../../../../Learning Swift/Game Of Life/Utils/TouchVisualizer";
-			sourceTree = "<group>";
-		};
-		50AD77AC1E2DDBF600B57D58 /* UIKit */ = {
-			isa = PBXGroup;
-			children = (
-				50AD77AD1E2DDBF600B57D58 /* GifUIImageView.swift */,
-				50AD77AE1E2DDBF600B57D58 /* UIButton.swift */,
-				50AD77AF1E2DDBF600B57D58 /* UIColor.swift */,
-				50EE3DD71E2E79C800E4C45A /* UIColorExtension.swift */,
-				50AD7D961E2DF05600B57D58 /* UIImageView.swift */,
-				50AD77B01E2DDBF600B57D58 /* UIImage.swift */,
-				50AD77B21E2DDBF600B57D58 /* UIView.swift */,
-			);
-			name = UIKit;
-			path = "../../../../Learning Swift/Game Of Life/Utils/UIKit";
 			sourceTree = "<group>";
 		};
 		50AD77C91E2DDD6900B57D58 /* images */ = {
@@ -2628,7 +2623,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50AD77BE1E2DDBF600B57D58 /* TouchVisualizer.h in Headers */,
+				5001BEB81E2F471F00116B2E /* TouchVisualizer.h in Headers */,
 				50AD77921E2DDBB500B57D58 /* Utils.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3581,26 +3576,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50AD77BB1E2DDBF600B57D58 /* SKTextureAtlas.swift in Sources */,
-				50AD77C11E2DDBF700B57D58 /* GifUIImageView.swift in Sources */,
-				50AD77C01E2DDBF700B57D58 /* Visualizer.swift in Sources */,
-				50AD77BA1E2DDBF600B57D58 /* SKSpriteNode.swift in Sources */,
-				50AD77B61E2DDBF600B57D58 /* CGSize.swift in Sources */,
-				50AD77C31E2DDBF700B57D58 /* UIColor.swift in Sources */,
-				50AD77C41E2DDBF700B57D58 /* UIImage.swift in Sources */,
-				50EE3DD81E2E79C800E4C45A /* UIColorExtension.swift in Sources */,
-				50AD77C21E2DDBF700B57D58 /* UIButton.swift in Sources */,
-				50AD77B41E2DDBF600B57D58 /* CGPoint.swift in Sources */,
-				50AD77B71E2DDBF600B57D58 /* CGVector.swift in Sources */,
-				50AD77BD1E2DDBF600B57D58 /* TouchView.swift in Sources */,
-				50AD77BF1E2DDBF700B57D58 /* UIWindow+Swizzle.swift in Sources */,
-				50AD7D971E2DF05600B57D58 /* UIImageView.swift in Sources */,
-				50AD77C61E2DDBF700B57D58 /* UIView.swift in Sources */,
-				50AD77B51E2DDBF600B57D58 /* CGRect.swift in Sources */,
-				50AD77BC1E2DDBF600B57D58 /* Configuration.swift in Sources */,
-				50AD77B91E2DDBF600B57D58 /* SKNode.swift in Sources */,
-				50AD77B81E2DDBF600B57D58 /* GKGraphNode2D.swift in Sources */,
-				50AD77B31E2DDBF600B57D58 /* CGFloat.swift in Sources */,
+				5001BEC91E2F473E00116B2E /* UIView.swift in Sources */,
+				5001BEC61E2F473E00116B2E /* UIColorExtension.swift in Sources */,
+				5001BEB51E2F471F00116B2E /* SKTextureAtlas.swift in Sources */,
+				5001BEC31E2F473E00116B2E /* GifUIImageView.swift in Sources */,
+				5001BEBA1E2F471F00116B2E /* Visualizer.swift in Sources */,
+				5001BEB41E2F471F00116B2E /* SKSpriteNode.swift in Sources */,
+				5001BEB01E2F471F00116B2E /* CGSize.swift in Sources */,
+				5001BEC51E2F473E00116B2E /* UIColor.swift in Sources */,
+				5001BEC41E2F473E00116B2E /* UIButton.swift in Sources */,
+				5001BEAE1E2F471F00116B2E /* CGPoint.swift in Sources */,
+				5001BEB11E2F471F00116B2E /* CGVector.swift in Sources */,
+				5001BEB71E2F471F00116B2E /* TouchView.swift in Sources */,
+				5001BEB91E2F471F00116B2E /* UIWindow+Swizzle.swift in Sources */,
+				5001BEC81E2F473E00116B2E /* UIImageView.swift in Sources */,
+				5001BEAF1E2F471F00116B2E /* CGRect.swift in Sources */,
+				5001BEB61E2F471F00116B2E /* Configuration.swift in Sources */,
+				5001BEB31E2F471F00116B2E /* SKNode.swift in Sources */,
+				5001BEC71E2F473E00116B2E /* UIImage.swift in Sources */,
+				5001BEB21E2F471F00116B2E /* GKGraphNode2D.swift in Sources */,
+				5001BEAD1E2F471F00116B2E /* CGFloat.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3941,6 +3936,7 @@
 				507149621E2F2F71001187BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		50AD77991E2DDBB500B57D58 /* Build configuration list for PBXNativeTarget "Utils" */ = {
 			isa = XCConfigurationList;
