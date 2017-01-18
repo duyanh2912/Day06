@@ -11,10 +11,10 @@ import CustomDrawing
 
 class PlayViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
-    @IBOutlet weak var imageView: CustomUIImageView!
-    @IBOutlet var nameButtons: [CustomUIButton]!
+    @IBOutlet weak var imageView: CustomUIImageView!        // Utils
+    @IBOutlet var nameButtons: [CustomUIButton]!            // Utils
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var progressView: CircularProgressView!
+    @IBOutlet weak var progressView: CircularProgressView!  // Custom Drawing
     
     var gameTimer: Timer?
     
