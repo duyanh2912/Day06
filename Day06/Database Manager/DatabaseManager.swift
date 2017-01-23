@@ -6,7 +6,6 @@
 //  Copyright © 2017 Duy Anh. All rights reserved.
 //
 
-import FMDB
 import Foundation
 
 let kPokemonName = "name"
