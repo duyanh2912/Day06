@@ -49,7 +49,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fDI-Vn-Wqf">
-                                <rect key="frame" x="0.5" y="280" width="320" height="8"/>
+                                <rect key="frame" x="1" y="280" width="320" height="8"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZi-I8-ijc">
@@ -218,30 +218,36 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QfM-gZ-dfP">
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QfM-gZ-dfP">
                                 <rect key="frame" x="16" y="112" width="288" height="246"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Pikachu.png" translatesAutoresizingMaskIntoConstraints="NO" id="UQA-tE-SHH">
-                                        <rect key="frame" x="0.0" y="16" width="288" height="215"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pikachu.png" translatesAutoresizingMaskIntoConstraints="NO" id="UQA-tE-SHH">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="246"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pOU-8Z-Qc7">
+                                        <rect key="frame" x="10" y="5" width="42" height="20"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="pOU-8Z-Qc7" firstAttribute="leading" secondItem="QfM-gZ-dfP" secondAttribute="leading" constant="10" identifier="NameLabelLeading" id="J6Q-ht-UxX"/>
+                                    <constraint firstItem="UQA-tE-SHH" firstAttribute="top" secondItem="QfM-gZ-dfP" secondAttribute="top" id="P3j-Jt-PMi"/>
+                                    <constraint firstItem="UQA-tE-SHH" firstAttribute="leading" secondItem="QfM-gZ-dfP" secondAttribute="leading" id="RDH-sc-Iwm"/>
+                                    <constraint firstItem="pOU-8Z-Qc7" firstAttribute="top" secondItem="QfM-gZ-dfP" secondAttribute="top" constant="5" id="VVq-kj-4XO"/>
+                                    <constraint firstAttribute="bottom" secondItem="UQA-tE-SHH" secondAttribute="bottom" id="lBa-k7-FxJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="UQA-tE-SHH" secondAttribute="trailing" id="yrg-Jz-yKX"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pOU-8Z-Qc7">
-                                <rect key="frame" x="26" y="117" width="42" height="20"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tia-AX-nxy">
-                                <rect key="frame" x="145" y="62" width="31.5" height="50"/>
+                                <rect key="frame" x="144.5" y="62" width="31.5" height="50"/>
                                 <fontDescription key="fontDescription" name="StencilStd" family="Stencil Std" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -282,8 +288,6 @@
                             <constraint firstItem="QfM-gZ-dfP" firstAttribute="centerX" secondItem="cdE-xE-fuS" secondAttribute="centerX" id="Xbr-qT-2L6"/>
                             <constraint firstItem="Hb0-02-tdC" firstAttribute="top" secondItem="QfM-gZ-dfP" secondAttribute="bottom" constant="14.5" id="YRG-XZ-NSy"/>
                             <constraint firstItem="Tia-AX-nxy" firstAttribute="top" secondItem="cdE-xE-fuS" secondAttribute="top" constant="62" id="Yc2-YH-36o"/>
-                            <constraint firstItem="pOU-8Z-Qc7" firstAttribute="leading" secondItem="QfM-gZ-dfP" secondAttribute="leading" constant="10" id="b0i-wb-rTe"/>
-                            <constraint firstItem="QfM-gZ-dfP" firstAttribute="top" secondItem="pOU-8Z-Qc7" secondAttribute="top" constant="-5" id="bh4-Au-4pE"/>
                             <constraint firstItem="y8t-wM-86v" firstAttribute="height" secondItem="WuL-2q-Fch" secondAttribute="height" id="jAs-Fi-cKN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="y8t-wM-86v" secondAttribute="trailing" id="kr8-Au-7Rw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Hb0-02-tdC" secondAttribute="trailing" id="kuV-Uz-GPM"/>
