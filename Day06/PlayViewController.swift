@@ -14,7 +14,10 @@ class PlayViewController: UIViewController {
     @IBOutlet var nameButtons: [CustomUIButton]!            // Utils
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var progressView: CircularProgressView!  // Custom Drawing
+    
     @IBOutlet weak var cardHolderView: UIView!
+    @IBOutlet weak var cardHolderCenterConstraint: NSLayoutConstraint!
+    
     var gameTimer: Timer?
     
     var frontImage: UIImageView = UIImageView(image: nil)
@@ -44,24 +47,48 @@ class PlayViewController: UIViewController {
         }
         
         UIView.transition(from: frontImage, to: backImage, duration: 0.5, options: .transitionFlipFromLeft) { [unowned self] _ in
+            self.cardHolderView.sendSubview(toBack: self.backImage)
             self.nameLabel.isHidden = false
-        }
+            
+            self.view.isUserInteractionEnabled = false
+            self.view.layoutIfNeeded()
+            
+            for btn in self.nameButtons { btn.isHidden = true }
         
-        view.isUserInteractionEnabled = false
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { [weak self] in
-            self?.newPokemon()
-            self?.view.isUserInteractionEnabled = true
+            UIView.animate(withDuration: 0.5, delay: 0.5, options: .curveEaseInOut, animations: { [weak self] in
+                guard self != nil else { return }
+                self!.cardHolderCenterConstraint.constant = -self!.view.frame.width / 2 - self!.cardHolderView.frame.width / 2
+                self?.view.layoutIfNeeded()
+            }) {
+                [weak self] _ in guard self != nil else { return }
+                
+                self?.newPokemon()
+                self?.cardHolderCenterConstraint.constant = self!.view.frame.width / 2 + self!.cardHolderView.frame.width / 2
+                self?.view.layoutIfNeeded()
+                
+                UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut, animations: {
+                    self?.cardHolderCenterConstraint.constant = 0
+                    self?.view.layoutIfNeeded()
+                }) { [weak self] _ in guard self != nil else { return }
+                    self?.view.isUserInteractionEnabled = true
+                    for btn in self!.nameButtons { btn.isHidden = false }
+                }
+            }   
         }
     }
     
     func setupImage() {
-        for sub in cardHolderView.subviews { sub.removeFromSuperview() }
+        for sub in cardHolderView.subviews where sub !== nameLabel { sub.removeFromSuperview() }
         frontImage.image = UIImage(named: dataModel.currentPokemon.img)!.withRenderingMode(.alwaysTemplate)
         frontImage.frame = CGRect(origin: .zero, size: cardHolderView.frame.size)
         frontImage.tintColor = .black
+        frontImage.backgroundColor = .white
+        frontImage.contentMode = .scaleAspectFit
         
         backImage.image = UIImage(named: dataModel.currentPokemon.img)
         backImage.frame = CGRect(origin: .zero, size: cardHolderView.frame.size)
+        backImage.backgroundColor = .white
+        backImage.contentMode = .scaleAspectFit
         
         cardHolderView.addSubview(frontImage)
     }

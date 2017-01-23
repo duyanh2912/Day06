@@ -49,11 +49,11 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fDI-Vn-Wqf">
-                                <rect key="frame" x="1" y="280" width="320" height="8"/>
+                                <rect key="frame" x="0.5" y="280" width="320" height="7"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZi-I8-ijc">
-                                <rect key="frame" x="107" y="231" width="107" height="107"/>
+                                <rect key="frame" x="106.5" y="230.5" width="107" height="107"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="xZi-I8-ijc" secondAttribute="height" id="kea-MK-blj"/>
                                 </constraints>
@@ -78,13 +78,13 @@
                                 <state key="normal" image="Icon_Settings"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HIGH SCORE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agv-T2-gko">
-                                <rect key="frame" x="68" y="167" width="185" height="46"/>
+                                <rect key="frame" x="67.5" y="166.5" width="185" height="46"/>
                                 <fontDescription key="fontDescription" name="PoplarStd" family="Poplar Std" pointSize="46"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25m-OF-bvX">
-                                <rect key="frame" x="139" y="86" width="42" height="66"/>
+                                <rect key="frame" x="139" y="85.5" width="42" height="66"/>
                                 <fontDescription key="fontDescription" name="StencilStd" family="Stencil Std" pointSize="66"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -219,15 +219,15 @@
                                 </userDefinedRuntimeAttributes>
                             </stackView>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QfM-gZ-dfP">
-                                <rect key="frame" x="16" y="112" width="288" height="246"/>
+                                <rect key="frame" x="16" y="123" width="288" height="235"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pikachu.png" translatesAutoresizingMaskIntoConstraints="NO" id="UQA-tE-SHH">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="246"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="223.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pOU-8Z-Qc7">
-                                        <rect key="frame" x="10" y="5" width="42" height="20"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <rect key="frame" x="10" y="5" width="44.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -237,7 +237,7 @@
                                     <constraint firstItem="UQA-tE-SHH" firstAttribute="top" secondItem="QfM-gZ-dfP" secondAttribute="top" id="P3j-Jt-PMi"/>
                                     <constraint firstItem="UQA-tE-SHH" firstAttribute="leading" secondItem="QfM-gZ-dfP" secondAttribute="leading" id="RDH-sc-Iwm"/>
                                     <constraint firstItem="pOU-8Z-Qc7" firstAttribute="top" secondItem="QfM-gZ-dfP" secondAttribute="top" constant="5" id="VVq-kj-4XO"/>
-                                    <constraint firstAttribute="bottom" secondItem="UQA-tE-SHH" secondAttribute="bottom" id="lBa-k7-FxJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="UQA-tE-SHH" secondAttribute="bottom" multiplier="1.05" id="lBa-k7-FxJ"/>
                                     <constraint firstAttribute="trailing" secondItem="UQA-tE-SHH" secondAttribute="trailing" id="yrg-Jz-yKX"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -279,7 +279,8 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.8145647278" blue="0.38470708460000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="QfM-gZ-dfP" firstAttribute="top" secondItem="Tia-AX-nxy" secondAttribute="bottom" id="49f-2Y-KBS"/>
+                            <constraint firstItem="QfM-gZ-dfP" firstAttribute="width" secondItem="cdE-xE-fuS" secondAttribute="width" constant="-32" id="23N-Jt-dLb"/>
+                            <constraint firstItem="QfM-gZ-dfP" firstAttribute="top" secondItem="Tia-AX-nxy" secondAttribute="bottom" multiplier="1.1" id="49f-2Y-KBS"/>
                             <constraint firstItem="y8t-wM-86v" firstAttribute="top" secondItem="WuL-2q-Fch" secondAttribute="top" id="ENr-MB-YUj"/>
                             <constraint firstItem="Hb0-02-tdC" firstAttribute="leading" secondItem="cdE-xE-fuS" secondAttribute="leadingMargin" id="L5w-xA-dNz"/>
                             <constraint firstItem="WuL-2q-Fch" firstAttribute="leading" secondItem="cdE-xE-fuS" secondAttribute="leadingMargin" constant="-10" id="Qbz-e1-4Qp"/>
@@ -294,10 +295,16 @@
                             <constraint firstItem="qwD-Gs-1BE" firstAttribute="top" secondItem="Hb0-02-tdC" secondAttribute="bottom" multiplier="1.1" id="mDC-bY-3aW"/>
                             <constraint firstItem="Tia-AX-nxy" firstAttribute="centerX" secondItem="cdE-xE-fuS" secondAttribute="centerX" id="xne-Sa-QW7"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Snj-8k-Tkb"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="6Sb-oa-HVt"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="cardHolderCenterConstraint" destination="Xbr-qT-2L6" id="Fmz-oz-Qe7"/>
                         <outlet property="cardHolderView" destination="QfM-gZ-dfP" id="D9h-Wh-c1K"/>
                         <outlet property="nameLabel" destination="pOU-8Z-Qc7" id="cP5-e9-NlA"/>
                         <outlet property="progressView" destination="y8t-wM-86v" id="Cme-nM-nKI"/>
