@@ -70,6 +70,8 @@ class PlayViewController: UIViewController {
             }
         }
         
+        backImage.frame = frontImage.frame
+
         UIView.transition(from: frontImage, to: backImage, duration: 0.5, options: .transitionFlipFromLeft) { [unowned self] _ in
             self.cardHolderView.sendSubview(toBack: self.backImage)
             self.nameLabel.isHidden = false
@@ -103,19 +105,19 @@ class PlayViewController: UIViewController {
     func setupImage() {
         for sub in cardHolderView.subviews where sub !== nameLabel { sub.removeFromSuperview() }
         frontImage.image = UIImage(named: dataModel.currentPokemon.img)!.withRenderingMode(.alwaysTemplate)
-        frontImage.frame = CGRect(origin: .zero, size: cardHolderView.frame.size)
         frontImage.tintColor = .black
         frontImage.backgroundColor = .white
         frontImage.contentMode = .scaleAspectFit
         frontImage.cornerRadius = 20
+        frontImage.translatesAutoresizingMaskIntoConstraints = false
         
         backImage.image = UIImage(named: dataModel.currentPokemon.img)
-        backImage.frame = CGRect(origin: .zero, size: cardHolderView.frame.size)
         backImage.backgroundColor = .white
         backImage.contentMode = .scaleAspectFit
         backImage.cornerRadius = 20
         
         cardHolderView.addSubview(frontImage)
+        frontImage.createAnchorsToFitWith(other: cardHolderView)
     }
     
     func startCounting() {

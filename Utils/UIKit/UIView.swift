@@ -12,6 +12,14 @@ import Foundation
 public class CustomUIView: UIView {}
 
 extension UIView {
+    public func createAnchorsToFitWith(other: UIView) {
+        self.topAnchor.constraint(equalTo: other.topAnchor).isActive = true
+        self.bottomAnchor.constraint(equalTo: other.bottomAnchor).isActive = true
+        self.leftAnchor.constraint(equalTo: other.leftAnchor).isActive = true
+        self.rightAnchor.constraint(equalTo: other.rightAnchor).isActive = true
+
+    }
+    
     static public func disableAndHideView(views: UIView...) {
         for view in views {
             view.isHidden = true
