@@ -50,6 +50,34 @@ class DatabaseManager {
         return count
     }
     
+    func getAllPokemons(generations: [Int]) -> [Pokemon] {
+        var gensString = "("
+        for (index,gen) in generations.enumerated() {
+            gensString += gen.description
+            if index != generations.count - 1 {
+                gensString += ","
+            } else {
+                gensString += ")"
+            }
+        }
+        
+        guard let db = database else { return [] }
+        var array: [Pokemon] = []
+        
+        db.open()
+        do {
+            let result = try db.executeQuery("Select * from pokemon where gen in " + gensString, values: nil)
+            while result.next() {
+                let pkm = pokemonFrom(result: result)
+                array.append(pkm)
+            }
+        } catch {
+            print("Failed to get pokemon")
+        }
+        db.close()
+        return array
+    }
+    
     func getPokemon(id: Int) -> Pokemon? {
         guard let db = database else { return nil }
         var pkm: Pokemon? = nil
@@ -58,12 +86,7 @@ class DatabaseManager {
         do {
             let result = try db.executeQuery("Select * from pokemon where id=\(id)", values: nil)
             result.next()
-            let name = result.string(forColumn: kPokemonName)!
-            let gen = Int(result.int(forColumn: kPokemonGen))
-            let tag = result.string(forColumn: kPokemonTag)!
-            let color = result.string(forColumn: kPokemonColor)!
-            let img = result.string(forColumn: kPokemonImage)!
-            pkm = Pokemon(name: name, tag: tag, gen: gen, img: img, color: color)
+            pkm = pokemonFrom(result: result)
         } catch {
             print("Failed to get pokemon")
         }
@@ -74,6 +97,15 @@ class DatabaseManager {
     func nameOfPokemon(id: Int) -> String? {
         let pkm = self.getPokemon(id: id)
         return pkm?.name
+    }
+    
+    func pokemonFrom(result: FMResultSet) -> Pokemon {
+        let name = result.string(forColumn: kPokemonName)!
+        let gen = Int(result.int(forColumn: kPokemonGen))
+        let tag = result.string(forColumn: kPokemonTag)!
+        let color = result.string(forColumn: kPokemonColor)!
+        let img = result.string(forColumn: kPokemonImage)!
+        return Pokemon(name: name, tag: tag, gen: gen, img: img, color: color)
     }
 }
 
