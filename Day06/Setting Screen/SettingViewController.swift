@@ -12,9 +12,13 @@ import UIKit
 class SettingViewController: UIViewController {
     
     @IBOutlet var generationButtons: [UIButton]!
+    @IBOutlet weak var effectSwitch: UISwitch!
+    @IBOutlet weak var musicSwitch: UISwitch!
     
     override func viewDidLoad() {
         GameStats.shared.addObserver(self, forKeyPath: #keyPath(GameStats.selectedGenerations), options: .initial, context: nil)
+        effectSwitch.isOn = GameStats.shared.effectsEnabled
+        musicSwitch.isOn = GameStats.shared.musicEnabled
     }
     
     deinit {
@@ -32,6 +36,8 @@ class SettingViewController: UIViewController {
     }
     
     @IBAction func tappedGenerationButton(_ sender: UIButton) {
+        SoundManager.shared.toggle.play()
+        
         var selectedGen = GameStats.shared.selectedGenerations
         if let index = selectedGen.index(of: sender.tag) {
             if selectedGen.count == 1 { return }
@@ -40,5 +46,16 @@ class SettingViewController: UIViewController {
             selectedGen.append(sender.tag)
         }
         GameStats.shared.selectedGenerations = selectedGen
+    }
+    
+    
+    @IBAction func effectsSwitched(_ sender: UISwitch) {
+        GameStats.shared.effectsEnabled = sender.isOn
+        SoundManager.shared.toggle.play()
+    }
+    
+    @IBAction func musicSwitched(_ sender: UISwitch) {
+        GameStats.shared.musicEnabled = sender.isOn
+        SoundManager.shared.toggle.play()
     }
 }

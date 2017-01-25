@@ -256,7 +256,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WuL-2q-Fch">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WuL-2q-Fch">
                                 <rect key="frame" x="0.0" y="30" width="44" height="44"/>
                                 <state key="normal" image="Back-44"/>
                                 <connections>
@@ -336,7 +336,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZ8-U9-9if">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZ8-U9-9if">
                                 <rect key="frame" x="0.0" y="20" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="egD-r3-dwG"/>
@@ -361,6 +361,9 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BWu-Rk-vgd">
                                                 <rect key="frame" x="247" y="0.0" width="51" height="31"/>
                                                 <color key="onTintColor" red="0.58431372549019611" green="0.2196078431372549" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="effectsSwitched:" destination="PWf-I7-JNp" eventType="valueChanged" id="vAg-ip-62J"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -376,6 +379,9 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dx3-Ao-HK2">
                                                 <rect key="frame" x="247" y="0.0" width="51" height="31"/>
                                                 <color key="onTintColor" red="0.58431372549019611" green="0.2196078431372549" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="musicSwitched:" destination="PWf-I7-JNp" eventType="valueChanged" id="g7E-5t-DyP"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -550,12 +556,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="9ig-j1-myc"/>
                     <connections>
-                        <outletCollection property="generationButtons" destination="Gcf-ls-z1f" id="3mE-06-p7C"/>
-                        <outletCollection property="generationButtons" destination="0wX-B6-Kax" id="Izb-br-QRZ"/>
-                        <outletCollection property="generationButtons" destination="G9Z-IN-8ca" id="cGd-GR-Azu"/>
-                        <outletCollection property="generationButtons" destination="ikJ-Pi-woj" id="n2J-1r-Vn3"/>
-                        <outletCollection property="generationButtons" destination="pmR-9h-eqb" id="XD5-ey-TXW"/>
-                        <outletCollection property="generationButtons" destination="AIr-CC-dWZ" id="vcI-oa-CWy"/>
+                        <outlet property="effectSwitch" destination="BWu-Rk-vgd" id="CAV-u4-riM"/>
+                        <outlet property="musicSwitch" destination="dx3-Ao-HK2" id="cmh-TB-n9F"/>
+                        <outletCollection property="generationButtons" destination="Gcf-ls-z1f" collectionClass="NSMutableArray" id="3mE-06-p7C"/>
+                        <outletCollection property="generationButtons" destination="0wX-B6-Kax" collectionClass="NSMutableArray" id="Izb-br-QRZ"/>
+                        <outletCollection property="generationButtons" destination="G9Z-IN-8ca" collectionClass="NSMutableArray" id="cGd-GR-Azu"/>
+                        <outletCollection property="generationButtons" destination="ikJ-Pi-woj" collectionClass="NSMutableArray" id="n2J-1r-Vn3"/>
+                        <outletCollection property="generationButtons" destination="pmR-9h-eqb" collectionClass="NSMutableArray" id="XD5-ey-TXW"/>
+                        <outletCollection property="generationButtons" destination="AIr-CC-dWZ" collectionClass="NSMutableArray" id="vcI-oa-CWy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u4J-uZ-U8Q" userLabel="First Responder" sceneMemberID="firstResponder"/>

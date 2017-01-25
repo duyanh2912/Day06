@@ -37,6 +37,14 @@ class PlayViewController: UIViewController {
         dataModel.addObserver(self, forKeyPath: #keyPath(PlayModel.score), options: .new, context: nil)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        SoundManager.shared.menuMusic.stop()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        SoundManager.shared.playMusic.play()
+    }
+    
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         self.scoreLabel.text = dataModel.score.description
     }
@@ -46,9 +54,15 @@ class PlayViewController: UIViewController {
     }
     
     func onClickAnswer(sender: UIButton) {
+        SoundManager.shared.click.play()
         self.view.isUserInteractionEnabled = false
         
-        dataModel.submitAnswer(sender.title(for: .normal)!)
+        if dataModel.submitAnswer(sender.title(for: .normal)!) == true {
+            SoundManager.shared.correct.play()
+        } else {
+            SoundManager.shared.incorrect.play()
+        }
+        
         sender.backgroundColor = UIColor(colorLiteralRed: 255/255, green: 120/255, blue: 104/255, alpha: 1)
         for button in nameButtons {
             if button.title(for: .normal) == dataModel.currentPokemon.name {

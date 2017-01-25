@@ -29,12 +29,6 @@
 		5001BEC81E2F473E00116B2E /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001BEC11E2F473E00116B2E /* UIImageView.swift */; };
 		5001BEC91E2F473E00116B2E /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001BEC21E2F473E00116B2E /* UIView.swift */; };
 		5001BECB1E2F635000116B2E /* Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50AD778E1E2DDBB500B57D58 /* Utils.framework */; };
-		5011F41C1E37B47D00C6D4EB /* 8-Bit-Mayhem.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5011F4161E37B47D00C6D4EB /* 8-Bit-Mayhem.mp3 */; };
-		5011F41D1E37B47D00C6D4EB /* firered_00A3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5011F4171E37B47D00C6D4EB /* firered_00A3.wav */; };
-		5011F41E1E37B47D00C6D4EB /* firered_00FA.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5011F4181E37B47D00C6D4EB /* firered_00FA.wav */; };
-		5011F41F1E37B47D00C6D4EB /* Quirky-Puzzle-Game-Menu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5011F4191E37B47D00C6D4EB /* Quirky-Puzzle-Game-Menu.mp3 */; };
-		5011F4201E37B47D00C6D4EB /* UIClick.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5011F41A1E37B47D00C6D4EB /* UIClick.wav */; };
-		5011F4211E37B47D00C6D4EB /* UIToggle.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5011F41B1E37B47D00C6D4EB /* UIToggle.wav */; };
 		5037F1B71E2B516C00A45703 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5037F1B61E2B516C00A45703 /* AppDelegate.swift */; };
 		5037F1BC1E2B516C00A45703 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5037F1BA1E2B516C00A45703 /* Main.storyboard */; };
 		5037F1C11E2B516C00A45703 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5037F1C01E2B516C00A45703 /* Assets.xcassets */; };
@@ -44,6 +38,13 @@
 		505431661E38D13500DA18B1 /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505431631E38D13500DA18B1 /* PlayViewController.swift */; };
 		505431681E38DA1A00DA18B1 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505431671E38DA1A00DA18B1 /* Array.swift */; };
 		5054316B1E38DC0E00DA18B1 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5054316A1E38DC0E00DA18B1 /* SettingViewController.swift */; };
+		505431771E38E17D00DA18B1 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5054316F1E38E17D00DA18B1 /* SoundManager.swift */; };
+		505431781E38E17D00DA18B1 /* 8-Bit-Mayhem.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 505431711E38E17D00DA18B1 /* 8-Bit-Mayhem.mp3 */; };
+		505431791E38E17D00DA18B1 /* firered_00A3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 505431721E38E17D00DA18B1 /* firered_00A3.wav */; };
+		5054317A1E38E17D00DA18B1 /* firered_00FA.wav in Resources */ = {isa = PBXBuildFile; fileRef = 505431731E38E17D00DA18B1 /* firered_00FA.wav */; };
+		5054317B1E38E17D00DA18B1 /* Quirky-Puzzle-Game-Menu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 505431741E38E17D00DA18B1 /* Quirky-Puzzle-Game-Menu.mp3 */; };
+		5054317C1E38E17D00DA18B1 /* UIClick.wav in Resources */ = {isa = PBXBuildFile; fileRef = 505431751E38E17D00DA18B1 /* UIClick.wav */; };
+		5054317D1E38E17D00DA18B1 /* UIToggle.wav in Resources */ = {isa = PBXBuildFile; fileRef = 505431761E38E17D00DA18B1 /* UIToggle.wav */; };
 		5071495C1E2F2F70001187BF /* CustomDrawing.h in Headers */ = {isa = PBXBuildFile; fileRef = 5071495A1E2F2F70001187BF /* CustomDrawing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5071495F1E2F2F70001187BF /* CustomDrawing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 507149581E2F2F70001187BF /* CustomDrawing.framework */; };
 		507149601E2F2F70001187BF /* CustomDrawing.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 507149581E2F2F70001187BF /* CustomDrawing.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -862,12 +863,6 @@
 		5001BEC01E2F473E00116B2E /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		5001BEC11E2F473E00116B2E /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		5001BEC21E2F473E00116B2E /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
-		5011F4161E37B47D00C6D4EB /* 8-Bit-Mayhem.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "8-Bit-Mayhem.mp3"; sourceTree = "<group>"; };
-		5011F4171E37B47D00C6D4EB /* firered_00A3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = firered_00A3.wav; sourceTree = "<group>"; };
-		5011F4181E37B47D00C6D4EB /* firered_00FA.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = firered_00FA.wav; sourceTree = "<group>"; };
-		5011F4191E37B47D00C6D4EB /* Quirky-Puzzle-Game-Menu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Quirky-Puzzle-Game-Menu.mp3"; sourceTree = "<group>"; };
-		5011F41A1E37B47D00C6D4EB /* UIClick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = UIClick.wav; sourceTree = "<group>"; };
-		5011F41B1E37B47D00C6D4EB /* UIToggle.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = UIToggle.wav; sourceTree = "<group>"; };
 		5037F1B31E2B516C00A45703 /* Day06.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Day06.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5037F1B61E2B516C00A45703 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5037F1BB1E2B516C00A45703 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -880,6 +875,13 @@
 		505431631E38D13500DA18B1 /* PlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
 		505431671E38DA1A00DA18B1 /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		5054316A1E38DC0E00DA18B1 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		5054316F1E38E17D00DA18B1 /* SoundManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		505431711E38E17D00DA18B1 /* 8-Bit-Mayhem.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "8-Bit-Mayhem.mp3"; sourceTree = "<group>"; };
+		505431721E38E17D00DA18B1 /* firered_00A3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = firered_00A3.wav; sourceTree = "<group>"; };
+		505431731E38E17D00DA18B1 /* firered_00FA.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = firered_00FA.wav; sourceTree = "<group>"; };
+		505431741E38E17D00DA18B1 /* Quirky-Puzzle-Game-Menu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Quirky-Puzzle-Game-Menu.mp3"; sourceTree = "<group>"; };
+		505431751E38E17D00DA18B1 /* UIClick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = UIClick.wav; sourceTree = "<group>"; };
+		505431761E38E17D00DA18B1 /* UIToggle.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = UIToggle.wav; sourceTree = "<group>"; };
 		505578451E2E1A57008C6E69 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		507149581E2F2F70001187BF /* CustomDrawing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CustomDrawing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5071495A1E2F2F70001187BF /* CustomDrawing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomDrawing.h; sourceTree = "<group>"; };
@@ -1737,19 +1739,6 @@
 			path = UIKit;
 			sourceTree = "<group>";
 		};
-		5011F4151E37B47D00C6D4EB /* Sounds */ = {
-			isa = PBXGroup;
-			children = (
-				5011F4161E37B47D00C6D4EB /* 8-Bit-Mayhem.mp3 */,
-				5011F4171E37B47D00C6D4EB /* firered_00A3.wav */,
-				5011F4181E37B47D00C6D4EB /* firered_00FA.wav */,
-				5011F4191E37B47D00C6D4EB /* Quirky-Puzzle-Game-Menu.mp3 */,
-				5011F41A1E37B47D00C6D4EB /* UIClick.wav */,
-				5011F41B1E37B47D00C6D4EB /* UIToggle.wav */,
-			);
-			path = Sounds;
-			sourceTree = "<group>";
-		};
 		5037F1AA1E2B516C00A45703 = {
 			isa = PBXGroup;
 			children = (
@@ -1775,9 +1764,9 @@
 		5037F1B51E2B516C00A45703 /* Day06 */ = {
 			isa = PBXGroup;
 			children = (
+				5054316E1E38E17D00DA18B1 /* Sound Manager */,
 				50AD7D9A1E2E12D200B57D58 /* Database Manager */,
 				50AD77C91E2DDD6900B57D58 /* images */,
-				5011F4151E37B47D00C6D4EB /* Sounds */,
 				509A883A1E2F66C4004D4A5E /* Fonts */,
 				5054315F1E38D13500DA18B1 /* Entry Screen */,
 				505431691E38DC0500DA18B1 /* Setting Screen */,
@@ -1825,6 +1814,28 @@
 				5054316A1E38DC0E00DA18B1 /* SettingViewController.swift */,
 			);
 			path = "Setting Screen";
+			sourceTree = "<group>";
+		};
+		5054316E1E38E17D00DA18B1 /* Sound Manager */ = {
+			isa = PBXGroup;
+			children = (
+				5054316F1E38E17D00DA18B1 /* SoundManager.swift */,
+				505431701E38E17D00DA18B1 /* Sounds */,
+			);
+			path = "Sound Manager";
+			sourceTree = "<group>";
+		};
+		505431701E38E17D00DA18B1 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				505431711E38E17D00DA18B1 /* 8-Bit-Mayhem.mp3 */,
+				505431721E38E17D00DA18B1 /* firered_00A3.wav */,
+				505431731E38E17D00DA18B1 /* firered_00FA.wav */,
+				505431741E38E17D00DA18B1 /* Quirky-Puzzle-Game-Menu.mp3 */,
+				505431751E38E17D00DA18B1 /* UIClick.wav */,
+				505431761E38E17D00DA18B1 /* UIToggle.wav */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 		507149591E2F2F70001187BF /* CustomDrawing */ = {
@@ -2871,7 +2882,7 @@
 				50AD7C7F1E2DDD6F00B57D58 /* Pelipper.png in Resources */,
 				50AD7B431E2DDD6F00B57D58 /* Dodrio.png in Resources */,
 				5037F1C41E2B516C00A45703 /* LaunchScreen.storyboard in Resources */,
-				5011F41E1E37B47D00C6D4EB /* firered_00FA.wav in Resources */,
+				5054317A1E38E17D00DA18B1 /* firered_00FA.wav in Resources */,
 				50AD7CA31E2DDD6F00B57D58 /* Purugly.png in Resources */,
 				50AD7D751E2DDD7000B57D58 /* Weavile.png in Resources */,
 				50AD7D301E2DDD7000B57D58 /* Tangrowth.png in Resources */,
@@ -2944,7 +2955,7 @@
 				50AD7BDA1E2DDD6F00B57D58 /* Inkay.png in Resources */,
 				50AD7B3A1E2DDD6F00B57D58 /* Delphox.png in Resources */,
 				50AD7C6A1E2DDD6F00B57D58 /* Nosepass.png in Resources */,
-				5011F41F1E37B47D00C6D4EB /* Quirky-Puzzle-Game-Menu.mp3 in Resources */,
+				5054317B1E38E17D00DA18B1 /* Quirky-Puzzle-Game-Menu.mp3 in Resources */,
 				50AD7CEC1E2DDD6F00B57D58 /* Sigilyph.png in Resources */,
 				50AD7D0C1E2DDD6F00B57D58 /* Spewpa.png in Resources */,
 				50AD7B051E2DDD6F00B57D58 /* Chansey.png in Resources */,
@@ -3311,7 +3322,7 @@
 				50AD7D4B1E2DDD7000B57D58 /* Trubbish.png in Resources */,
 				50AD7C111E2DDD6F00B57D58 /* Litten.png in Resources */,
 				50AD7CDA1E2DDD6F00B57D58 /* Sentret.png in Resources */,
-				5011F4201E37B47D00C6D4EB /* UIClick.wav in Resources */,
+				5054317C1E38E17D00DA18B1 /* UIClick.wav in Resources */,
 				50AD7D151E2DDD7000B57D58 /* Staraptor.png in Resources */,
 				50AD7D441E2DDD7000B57D58 /* Totodile.png in Resources */,
 				50AD7C3E1E2DDD6F00B57D58 /* Meganium.png in Resources */,
@@ -3319,7 +3330,7 @@
 				50AD7B101E2DDD6F00B57D58 /* Chimchar.png in Resources */,
 				50AD7CB61E2DDD6F00B57D58 /* Remoraid.png in Resources */,
 				50AD7BF81E2DDD6F00B57D58 /* Krokorok.png in Resources */,
-				5011F41D1E37B47D00C6D4EB /* firered_00A3.wav in Resources */,
+				505431791E38E17D00DA18B1 /* firered_00A3.wav in Resources */,
 				50AD7D3F1E2DDD7000B57D58 /* Togetic.png in Resources */,
 				50AD7B2A1E2DDD6F00B57D58 /* Crobat.png in Resources */,
 				50AD7B661E2DDD6F00B57D58 /* Emboar.png in Resources */,
@@ -3432,7 +3443,7 @@
 				50AD7ADF1E2DDD6F00B57D58 /* Bellsprout.png in Resources */,
 				50AD7BCF1E2DDD6F00B57D58 /* Hoothoot.png in Resources */,
 				50AD7AF51E2DDD6F00B57D58 /* Buneary.png in Resources */,
-				5011F41C1E37B47D00C6D4EB /* 8-Bit-Mayhem.mp3 in Resources */,
+				505431781E38E17D00DA18B1 /* 8-Bit-Mayhem.mp3 in Resources */,
 				50AD7ACF1E2DDD6F00B57D58 /* Azumarill.png in Resources */,
 				50AD7CDF1E2DDD6F00B57D58 /* Sharpedo.png in Resources */,
 				50AD7CE41E2DDD6F00B57D58 /* Shellos.png in Resources */,
@@ -3443,7 +3454,7 @@
 				50AD7C931E2DDD6F00B57D58 /* Poliwag.png in Resources */,
 				50AD7C341E2DDD6F00B57D58 /* Mantyke.png in Resources */,
 				50AD7AD51E2DDD6F00B57D58 /* Barboach.png in Resources */,
-				5011F4211E37B47D00C6D4EB /* UIToggle.wav in Resources */,
+				5054317D1E38E17D00DA18B1 /* UIToggle.wav in Resources */,
 				50AD7C701E2DDD6F00B57D58 /* Omastar.png in Resources */,
 				50AD7B581E2DDD6F00B57D58 /* Dusknoir.png in Resources */,
 				50AD7C451E2DDD6F00B57D58 /* Metapod.png in Resources */,
@@ -3556,6 +3567,7 @@
 				50AD7D9D1E2E12D200B57D58 /* DatabaseManager.swift in Sources */,
 				5054316B1E38DC0E00DA18B1 /* SettingViewController.swift in Sources */,
 				505431651E38D13500DA18B1 /* PlayModel.swift in Sources */,
+				505431771E38E17D00DA18B1 /* SoundManager.swift in Sources */,
 				505431661E38D13500DA18B1 /* PlayViewController.swift in Sources */,
 				5037F1B71E2B516C00A45703 /* AppDelegate.swift in Sources */,
 				50E7C9F61E36689300B55AD2 /* FMDatabaseAdditions.m in Sources */,

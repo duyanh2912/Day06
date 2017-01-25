@@ -14,8 +14,18 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         scoreLabel.text = GameStats.shared.highScore.description
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        SoundManager.shared.playMusic.stop()
+        SoundManager.shared.menuMusic.play()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        SoundManager.shared.click.play()
+    }
+    
     @IBAction func unwindToBase(segue: UIStoryboardSegue) {
-        
+        SoundManager.shared.click.play()
     }
 }
 

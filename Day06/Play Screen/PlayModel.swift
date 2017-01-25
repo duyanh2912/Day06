@@ -51,9 +51,11 @@ class PlayModel: NSObject {
         currentAnswers = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: currentAnswers) as! [String]
     }
     
-    func submitAnswer(_ name: String) {
+    func submitAnswer(_ name: String) -> Bool {
         if name == currentPokemon.name {
             score += 1
+            return true
         }
+        return false
     }
 }
