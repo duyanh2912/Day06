@@ -8,6 +8,7 @@
 
 import Foundation
 
+let kPokemonID = "id"
 let kPokemonName = "name"
 let kPokemonTag = "tag"
 let kPokemonGen = "gen"
@@ -48,6 +49,14 @@ class DatabaseManager {
         }
         db.close()
         return count
+    }
+    
+    func getPokemonIDs(generations: [Int]) -> [Int] {
+        var array: [Int] = []
+        getAllPokemons(generations: generations).forEach {
+            array.append($0.id)
+        }
+        return array
     }
     
     func getAllPokemons(generations: [Int]) -> [Pokemon] {
@@ -100,12 +109,13 @@ class DatabaseManager {
     }
     
     func pokemonFrom(result: FMResultSet) -> Pokemon {
+        let id = Int(result.int(forColumn: kPokemonID))
         let name = result.string(forColumn: kPokemonName)!
         let gen = Int(result.int(forColumn: kPokemonGen))
         let tag = result.string(forColumn: kPokemonTag)!
         let color = result.string(forColumn: kPokemonColor)!
         let img = result.string(forColumn: kPokemonImage)!
-        return Pokemon(name: name, tag: tag, gen: gen, img: img, color: color)
+        return Pokemon(id: id, name: name, tag: tag, gen: gen, img: img, color: color)
     }
 }
 

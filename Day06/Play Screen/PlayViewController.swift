@@ -25,9 +25,7 @@ class PlayViewController: UIViewController {
     
     let dataModel = PlayModel()
     
-    override func viewDidLoad() {
-        dataModel.vc = self
-        
+    override func viewDidLoad() {        
         for button in nameButtons {
             button.addTarget(self, action: #selector(onClickAnswer(sender:)), for: .touchUpInside)
         }
@@ -35,9 +33,21 @@ class PlayViewController: UIViewController {
         
         newPokemon()
         startCounting()
+        
+        dataModel.addObserver(self, forKeyPath: #keyPath(PlayModel.score), options: .new, context: nil)
+    }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        self.scoreLabel.text = dataModel.score.description
+    }
+    
+    deinit {
+        dataModel.removeObserver(self, forKeyPath: #keyPath(PlayModel.score))
     }
     
     func onClickAnswer(sender: UIButton) {
+        self.view.isUserInteractionEnabled = false
+        
         dataModel.submitAnswer(sender.title(for: .normal)!)
         sender.backgroundColor = UIColor(colorLiteralRed: 255/255, green: 120/255, blue: 104/255, alpha: 1)
         for button in nameButtons {
@@ -50,7 +60,6 @@ class PlayViewController: UIViewController {
             self.cardHolderView.sendSubview(toBack: self.backImage)
             self.nameLabel.isHidden = false
             
-            self.view.isUserInteractionEnabled = false
             self.view.layoutIfNeeded()
             
             for btn in self.nameButtons { btn.isHidden = true }

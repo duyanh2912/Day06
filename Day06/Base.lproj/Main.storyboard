@@ -34,10 +34,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I85-MC-VIf">
-                                <rect key="frame" x="0.0" y="280" width="320" height="288"/>
+                                <rect key="frame" x="0.0" y="281" width="320" height="287"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright @ Techkids 2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIT-1J-dUF">
-                                        <rect key="frame" x="54" y="259" width="211" height="21"/>
+                                        <rect key="frame" x="54" y="258" width="211" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -50,7 +50,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fDI-Vn-Wqf">
-                                <rect key="frame" x="1" y="280" width="320" height="7"/>
+                                <rect key="frame" x="1" y="281" width="320" height="7"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZi-I8-ijc">
@@ -327,7 +327,7 @@
         <!--Setting-->
         <scene sceneID="7gp-2e-3WW">
             <objects>
-                <viewController title="Setting" id="PWf-I7-JNp" sceneMemberID="viewController">
+                <viewController title="Setting" id="PWf-I7-JNp" customClass="SettingViewController" customModule="Day06" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Y95-45-UjF"/>
                         <viewControllerLayoutGuide type="bottom" id="TuZ-8V-m2m"/>
@@ -403,6 +403,9 @@
                                                 <state key="normal" title="GENERATION 1" backgroundImage="Background_Gen1">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tappedGenerationButton:" destination="PWf-I7-JNp" eventType="touchUpInside" id="LQw-rq-Nls"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wX-B6-Kax">
                                                 <rect key="frame" x="154" y="0.0" width="142" height="62.5"/>
@@ -411,6 +414,9 @@
                                                 <state key="normal" title="GENERATION 2" backgroundImage="Background_Gen2">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tappedGenerationButton:" destination="PWf-I7-JNp" eventType="touchUpInside" id="fep-Je-hPi"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -438,6 +444,9 @@
                                                 <state key="normal" title="GENERATION 3" backgroundImage="Background_Gen3">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tappedGenerationButton:" destination="PWf-I7-JNp" eventType="touchUpInside" id="v7M-Ez-5az"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ikJ-Pi-woj">
                                                 <rect key="frame" x="154" y="-0.5" width="142" height="62.5"/>
@@ -446,6 +455,9 @@
                                                 <state key="normal" title="GENERATION 4" backgroundImage="Background_Gen4">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tappedGenerationButton:" destination="PWf-I7-JNp" eventType="touchUpInside" id="7tR-Uu-LoW"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -473,6 +485,9 @@
                                                 <state key="normal" title="GENERATION 5" backgroundImage="Background_Gen5">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tappedGenerationButton:" destination="PWf-I7-JNp" eventType="touchUpInside" id="ud1-yC-58p"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AIr-CC-dWZ">
                                                 <rect key="frame" x="154" y="-0.5" width="142" height="62.5"/>
@@ -481,6 +496,9 @@
                                                 <state key="normal" title="GENERATION 6" backgroundImage="Background_Gen6">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tappedGenerationButton:" destination="PWf-I7-JNp" eventType="touchUpInside" id="wn2-20-5Bt"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -531,6 +549,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9ig-j1-myc"/>
+                    <connections>
+                        <outletCollection property="generationButtons" destination="Gcf-ls-z1f" id="3mE-06-p7C"/>
+                        <outletCollection property="generationButtons" destination="0wX-B6-Kax" id="Izb-br-QRZ"/>
+                        <outletCollection property="generationButtons" destination="G9Z-IN-8ca" id="cGd-GR-Azu"/>
+                        <outletCollection property="generationButtons" destination="ikJ-Pi-woj" id="n2J-1r-Vn3"/>
+                        <outletCollection property="generationButtons" destination="pmR-9h-eqb" id="XD5-ey-TXW"/>
+                        <outletCollection property="generationButtons" destination="AIr-CC-dWZ" id="vcI-oa-CWy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u4J-uZ-U8Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="keJ-7T-rlo" userLabel="Exit" sceneMemberID="exit"/>

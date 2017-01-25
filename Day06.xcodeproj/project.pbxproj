@@ -42,6 +42,8 @@
 		505431641E38D13500DA18B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505431601E38D13500DA18B1 /* ViewController.swift */; };
 		505431651E38D13500DA18B1 /* PlayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505431621E38D13500DA18B1 /* PlayModel.swift */; };
 		505431661E38D13500DA18B1 /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505431631E38D13500DA18B1 /* PlayViewController.swift */; };
+		505431681E38DA1A00DA18B1 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505431671E38DA1A00DA18B1 /* Array.swift */; };
+		5054316B1E38DC0E00DA18B1 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5054316A1E38DC0E00DA18B1 /* SettingViewController.swift */; };
 		5071495C1E2F2F70001187BF /* CustomDrawing.h in Headers */ = {isa = PBXBuildFile; fileRef = 5071495A1E2F2F70001187BF /* CustomDrawing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5071495F1E2F2F70001187BF /* CustomDrawing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 507149581E2F2F70001187BF /* CustomDrawing.framework */; };
 		507149601E2F2F70001187BF /* CustomDrawing.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 507149581E2F2F70001187BF /* CustomDrawing.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -876,6 +878,8 @@
 		505431601E38D13500DA18B1 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		505431621E38D13500DA18B1 /* PlayModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayModel.swift; sourceTree = "<group>"; };
 		505431631E38D13500DA18B1 /* PlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
+		505431671E38DA1A00DA18B1 /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		5054316A1E38DC0E00DA18B1 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		505578451E2E1A57008C6E69 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		507149581E2F2F70001187BF /* CustomDrawing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CustomDrawing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5071495A1E2F2F70001187BF /* CustomDrawing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomDrawing.h; sourceTree = "<group>"; };
@@ -1776,6 +1780,7 @@
 				5011F4151E37B47D00C6D4EB /* Sounds */,
 				509A883A1E2F66C4004D4A5E /* Fonts */,
 				5054315F1E38D13500DA18B1 /* Entry Screen */,
+				505431691E38DC0500DA18B1 /* Setting Screen */,
 				505431611E38D13500DA18B1 /* Play Screen */,
 				5037F1B61E2B516C00A45703 /* AppDelegate.swift */,
 				509F245A1E2F0AF50022A558 /* GameStats.swift */,
@@ -1814,6 +1819,14 @@
 			path = "Play Screen";
 			sourceTree = "<group>";
 		};
+		505431691E38DC0500DA18B1 /* Setting Screen */ = {
+			isa = PBXGroup;
+			children = (
+				5054316A1E38DC0E00DA18B1 /* SettingViewController.swift */,
+			);
+			path = "Setting Screen";
+			sourceTree = "<group>";
+		};
 		507149591E2F2F70001187BF /* CustomDrawing */ = {
 			isa = PBXGroup;
 			children = (
@@ -1843,6 +1856,7 @@
 				5001BEBB1E2F473E00116B2E /* UIKit */,
 				50AD77901E2DDBB500B57D58 /* Utils.h */,
 				50AD77911E2DDBB500B57D58 /* Info.plist */,
+				505431671E38DA1A00DA18B1 /* Array.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -3540,6 +3554,7 @@
 				505431641E38D13500DA18B1 /* ViewController.swift in Sources */,
 				509F245B1E2F0AF50022A558 /* GameStats.swift in Sources */,
 				50AD7D9D1E2E12D200B57D58 /* DatabaseManager.swift in Sources */,
+				5054316B1E38DC0E00DA18B1 /* SettingViewController.swift in Sources */,
 				505431651E38D13500DA18B1 /* PlayModel.swift in Sources */,
 				505431661E38D13500DA18B1 /* PlayViewController.swift in Sources */,
 				5037F1B71E2B516C00A45703 /* AppDelegate.swift in Sources */,
@@ -3573,6 +3588,7 @@
 				5001BEB01E2F471F00116B2E /* CGSize.swift in Sources */,
 				5001BEC51E2F473E00116B2E /* UIColor.swift in Sources */,
 				5001BEC41E2F473E00116B2E /* UIButton.swift in Sources */,
+				505431681E38DA1A00DA18B1 /* Array.swift in Sources */,
 				5001BEAE1E2F471F00116B2E /* CGPoint.swift in Sources */,
 				5001BEB11E2F471F00116B2E /* CGVector.swift in Sources */,
 				5001BEB71E2F471F00116B2E /* TouchView.swift in Sources */,

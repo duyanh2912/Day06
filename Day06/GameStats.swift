@@ -8,7 +8,7 @@
 //
 
 import Foundation
-class GameStats {
+class GameStats: NSObject {
     static var shared = GameStats()
     var highScore: Int {
         didSet {
@@ -16,8 +16,15 @@ class GameStats {
         }
     }
     var playTime: Int = 30
+    dynamic var selectedGenerations: [Int] {
+        didSet {
+            UserDefaults.standard.set(selectedGenerations, forKey: "SELECTED_GENERATIONS")
+        }
+    }
     
-    init() {
+    override init() {
         self.highScore = UserDefaults.standard.integer(forKey: "HIGH_SCORE")
+        self.selectedGenerations = UserDefaults.standard.array(forKey: "SELECTED_GENERATIONS") as? [Int] ?? [1]
+        super.init()
     }
 }

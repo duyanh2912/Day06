@@ -5,13 +5,14 @@
 //  Created by Duy Anh on 1/17/17.
 //  Copyright © 2017 Duy Anh. All rights reserved.
 //
+import Utils
 import GameplayKit
 import Foundation
 
-class PlayModel {
-    weak var vc: PlayViewController!
-    
+class PlayModel: NSObject {
+    var allPokemonsID: [Int]!
     var selectedPokemonsID: [Int] = []
+    
     var currentAnswers: [String] = []
     var currentPokemon: Pokemon!
     
@@ -19,22 +20,21 @@ class PlayModel {
     var elapsedPercent: CGFloat {
         return (1 - CGFloat(currentTime) / CGFloat(GameStats.shared.playTime))*100
     }
+    dynamic var score = 0
+    var dbm: DatabaseManager { return DatabaseManager.shared }
     
-    var score = 0 {
-        didSet {
-            vc.scoreLabel.text = score.description
-        }
+    override init() {
+        super.init()
+        allPokemonsID = dbm.getPokemonIDs(generations: GameStats.shared.selectedGenerations)
     }
-    
-    var dbm = DatabaseManager.shared
     
     func getNewPokemon() {
         currentAnswers.removeAll()
         currentPokemon = nil
         
-        var id = Int(arc4random_uniform(UInt32(dbm.numberOfPokemons))) + 1
+        var id = allPokemonsID.randomMember
         while selectedPokemonsID.contains(id) {
-            id = Int(arc4random_uniform(UInt32(dbm.numberOfPokemons))) + 1
+            id = allPokemonsID.randomMember
         }
         selectedPokemonsID.append(id)
         currentPokemon = dbm.getPokemon(id: id)
@@ -42,9 +42,9 @@ class PlayModel {
         currentAnswers.append(currentPokemon.name)
         
         for _ in 0 ... 2 {
-            var index = Int(arc4random_uniform(UInt32(dbm.numberOfPokemons))) + 1
+            var index = allPokemonsID.randomMember
             while currentAnswers.contains(dbm.nameOfPokemon(id: index)!) {
-                index = Int(arc4random_uniform(UInt32(dbm.numberOfPokemons))) + 1
+                index = allPokemonsID.randomMember
             }
             currentAnswers.append(dbm.nameOfPokemon(id: index)!)
         }
