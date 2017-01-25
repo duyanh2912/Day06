@@ -130,6 +130,7 @@ class PlayViewController: UIViewController {
                 timer.invalidate()
                 let ac = UIAlertController(title: "Time's up", message: "Score: \(self!.dataModel.score)", preferredStyle: .alert)
                 let ok = UIAlertAction(title: "Okay", style: .default) { _ in
+                    SoundManager.shared.click.play()
                     GameStats.shared.highScore = self!.dataModel.score
                     self!.performSegue(withIdentifier: "unwind", sender: nil)
                 }
@@ -157,5 +158,9 @@ class PlayViewController: UIViewController {
             nameButtons[i].setTitle(dataModel.currentAnswers[i], for: .normal)
         }
         setupImage()
+    }
+    
+    @IBAction func clickedBackButton(_ sender: UIButton) {
+        SoundManager.shared.click.play()
     }
 }

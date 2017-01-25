@@ -251,7 +251,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tia-AX-nxy">
-                                <rect key="frame" x="145" y="72" width="31.5" height="50"/>
+                                <rect key="frame" x="144.5" y="72" width="31.5" height="50"/>
                                 <fontDescription key="fontDescription" name="StencilStd" family="Stencil Std" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -260,6 +260,7 @@
                                 <rect key="frame" x="0.0" y="30" width="44" height="44"/>
                                 <state key="normal" image="Back-44"/>
                                 <connections>
+                                    <action selector="clickedBackButton:" destination="A3Y-xX-akt" eventType="touchUpInside" id="aTd-oS-tZj"/>
                                     <segue destination="iXE-Vq-jO9" kind="unwind" identifier="unwind" unwindAction="unwindToBaseWithSegue:" id="oyX-Mh-Clb"/>
                                 </connections>
                             </button>
@@ -576,7 +577,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Hv0-JT-8Gp" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="a1J-1h-OAK">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="a1J-1h-OAK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

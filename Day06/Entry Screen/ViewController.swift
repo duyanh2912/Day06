@@ -25,7 +25,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func unwindToBase(segue: UIStoryboardSegue) {
-        SoundManager.shared.click.play()
+        if segue.source is SettingViewController {
+            SoundManager.shared.click.play()
+        }
     }
 }
 
