@@ -36,15 +36,17 @@ class SettingViewController: UIViewController {
     }
     
     @IBAction func tappedGenerationButton(_ sender: UIButton) {
-        SoundManager.shared.toggle.play()
-        
         var selectedGen = GameStats.shared.selectedGenerations
         if let index = selectedGen.index(of: sender.tag) {
-            if selectedGen.count == 1 { return }
+            if selectedGen.count == 1 {
+                SoundManager.shared.incorrect.play()
+                return
+            }
             selectedGen.remove(at: index)
         } else {
             selectedGen.append(sender.tag)
         }
+        SoundManager.shared.toggle.play()
         GameStats.shared.selectedGenerations = selectedGen
     }
     

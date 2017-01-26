@@ -34,10 +34,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I85-MC-VIf">
-                                <rect key="frame" x="0.0" y="281" width="320" height="287"/>
+                                <rect key="frame" x="0.0" y="280.5" width="320" height="287.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright @ Techkids 2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIT-1J-dUF">
-                                        <rect key="frame" x="54" y="258" width="211" height="21"/>
+                                        <rect key="frame" x="54" y="258.5" width="211" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -50,7 +50,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fDI-Vn-Wqf">
-                                <rect key="frame" x="0.5" y="281" width="320" height="6"/>
+                                <rect key="frame" x="0.5" y="280.5" width="320" height="7"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZi-I8-ijc">
@@ -82,13 +82,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HIGH SCORE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agv-T2-gko">
-                                <rect key="frame" x="67.5" y="166.5" width="185" height="46"/>
+                                <rect key="frame" x="18" y="162.5" width="284" height="54"/>
                                 <fontDescription key="fontDescription" name="PoplarStd" family="Poplar Std" pointSize="46"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25m-OF-bvX">
-                                <rect key="frame" x="139" y="86" width="42" height="66"/>
+                                <rect key="frame" x="141.5" y="80.5" width="37" height="77"/>
                                 <fontDescription key="fontDescription" name="StencilStd" family="Stencil Std" pointSize="66"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -143,10 +143,10 @@
                                 <rect key="frame" x="10" y="383" width="300" height="133.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="j7B-f9-FTo">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="61.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="62"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YcS-ua-E3B" customClass="CustomUIButton" customModule="Utils">
-                                                <rect key="frame" x="0.0" y="0.0" width="140" height="61.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="140" height="62"/>
                                                 <color key="backgroundColor" red="1" green="0.47069775356916044" blue="0.40865912228561474" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal">
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -161,7 +161,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJ6-xg-yhW" customClass="CustomUIButton" customModule="Utils">
-                                                <rect key="frame" x="160" y="0.0" width="140" height="61.5"/>
+                                                <rect key="frame" x="160" y="0.0" width="140" height="62"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <state key="normal">
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -178,10 +178,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="TSx-w2-wat">
-                                        <rect key="frame" x="0.0" y="71.5" width="300" height="62"/>
+                                        <rect key="frame" x="0.0" y="72" width="300" height="61.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYJ-Qn-x9W" customClass="CustomUIButton" customModule="Utils">
-                                                <rect key="frame" x="0.0" y="0.0" width="140" height="62"/>
+                                                <rect key="frame" x="0.0" y="0.5" width="140" height="61.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <state key="normal">
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -196,7 +196,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTy-US-gSf" customClass="CustomUIButton" customModule="Utils">
-                                                <rect key="frame" x="160" y="0.0" width="140" height="62"/>
+                                                <rect key="frame" x="160" y="0.5" width="140" height="61.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <state key="normal">
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -251,7 +251,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tia-AX-nxy">
-                                <rect key="frame" x="144.5" y="72" width="31.5" height="50"/>
+                                <rect key="frame" x="145" y="72" width="31.5" height="50"/>
                                 <fontDescription key="fontDescription" name="StencilStd" family="Stencil Std" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
