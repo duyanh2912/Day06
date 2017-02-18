@@ -8,8 +8,8 @@
 
 import Foundation
 
-class Pokemon {
-    var id: Int
+class Pokemon: NSObject {
+    var id: Int!
     var name: String!
     var tag: String!
     var gen: Int!
@@ -23,5 +23,10 @@ class Pokemon {
         self.gen = gen
         self.img = img
         self.color = color
+        super.init()
+    }
+    
+    override init() {
+        super.init()
     }
 }

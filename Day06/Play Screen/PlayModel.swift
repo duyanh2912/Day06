@@ -8,52 +8,60 @@
 import Utils
 import GameplayKit
 import Foundation
+import RxSwift
+import RxCocoa
 
 class PlayModel: NSObject {
     var allPokemonsID: [Int]!
     var selectedPokemonsID: [Int] = []
     
     var currentAnswers: [String] = []
-    var currentPokemon: Pokemon!
+    var currentPokemon: Variable<Pokemon> = Variable(Pokemon())
     
-    var currentTime = GameStats.shared.playTime
-    var elapsedPercent: CGFloat {
-        return (1 - CGFloat(currentTime) / CGFloat(GameStats.shared.playTime))*100
-    }
-    dynamic var score = 0
+    var currentTime = Variable<CGFloat>(CGFloat(GameStats.shared.playTime))
+    var elapsedPercent: Observable<CGFloat>!
+    var score = Variable(0)
     var dbm: DatabaseManager { return DatabaseManager.shared }
+    
+    var disposeBag = DisposeBag()
+    
+    deinit {
+        print("Deinit-PlayModel")
+    }
     
     override init() {
         super.init()
+        setUpReactive()
         allPokemonsID = dbm.getPokemonIDs(generations: GameStats.shared.selectedGenerations)
+    }
+    
+    func setUpReactive() {
+        elapsedPercent = currentTime
+            .asObservable()
+            .map {
+                (1 - CGFloat($0) / CGFloat(GameStats.shared.playTime))*100
+        }
     }
     
     func getNewPokemon() {
         currentAnswers.removeAll()
-        currentPokemon = nil
         
-        var id = allPokemonsID.randomMember
-        while selectedPokemonsID.contains(id) {
-            id = allPokemonsID.randomMember
+        let ids = (0...3).map {_ in
+            getValueFrom({ allPokemonsID.randomMember }, notIncludedIn: selectedPokemonsID)
         }
-        selectedPokemonsID.append(id)
-        currentPokemon = dbm.getPokemon(id: id)
         
-        currentAnswers.append(currentPokemon.name)
-        
-        for _ in 0 ... 2 {
-            var index = allPokemonsID.randomMember
-            while currentAnswers.contains(dbm.nameOfPokemon(id: index)!) {
-                index = allPokemonsID.randomMember
-            }
-            currentAnswers.append(dbm.nameOfPokemon(id: index)!)
+        ids.forEach { id in
+            selectedPokemonsID.append(id)
+            currentAnswers.append(dbm.nameOfPokemon(id: id)!)
         }
-        currentAnswers = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: currentAnswers) as! [String]
+        
+        currentAnswers = currentAnswers.randomizedArray
+        currentPokemon.value = dbm.getPokemon(id: ids[0])!
     }
     
     func submitAnswer(_ name: String) -> Bool {
-        if name == currentPokemon.name {
-            score += 1
+        if name == currentPokemon.value.name {
+            score.value += 1
             return true
         }
         return false

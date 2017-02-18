@@ -5,7 +5,8 @@
 //  Created by Duy Anh on 1/17/17.
 //  Copyright © 2017 Duy Anh. All rights reserved.
 //
-
+import RxSwift
+import RxCocoa
 import Utils
 import CustomDrawing
 
@@ -19,22 +20,27 @@ class PlayViewController: UIViewController {
     @IBOutlet weak var cardHolderCenterConstraint: NSLayoutConstraint!
     
     var gameTimer: Timer?
+    var sig: Observable<Float>!
     
     var frontImage: UIImageView = UIImageView(image: nil)
     var backImage: UIImageView! = UIImageView(image: nil)
     
     let dataModel = PlayModel()
+    var disposeBag = DisposeBag()
     
-    override func viewDidLoad() {        
-        for button in nameButtons {
-            button.addTarget(self, action: #selector(onClickAnswer(sender:)), for: .touchUpInside)
-        }
-        self.progressView.progressPercentage = 0
+    deinit {
+        print("Deinit-PlayViewController")
+    }
+    
+    override func viewDidLoad() {
+        setUpButton()
         
         newPokemon()
         startCounting()
         
-        dataModel.addObserver(self, forKeyPath: #keyPath(PlayModel.score), options: .new, context: nil)
+        setUpScoreView()
+        setUpProgressView()
+        setUpPokemon()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -45,12 +51,24 @@ class PlayViewController: UIViewController {
         SoundManager.shared.playMusic.play()
     }
     
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        self.scoreLabel.text = dataModel.score.description
+    func setUpButton() {
+        nameButtons.forEach { (btn: UIButton) in
+            btn.rx
+                .tap
+                .subscribe(onNext: { [weak self] in
+                    self?.onClickAnswer(sender: btn)
+                })
+                .addDisposableTo(disposeBag)
+        }
     }
     
-    deinit {
-        dataModel.removeObserver(self, forKeyPath: #keyPath(PlayModel.score))
+    func setUpScoreView() {
+        dataModel
+            .score
+            .asObservable()
+            .map { $0.description }
+            .bindTo(scoreLabel.rx.text)
+            .addDisposableTo(disposeBag)
     }
     
     func onClickAnswer(sender: UIButton) {
@@ -65,13 +83,13 @@ class PlayViewController: UIViewController {
         
         sender.backgroundColor = UIColor(colorLiteralRed: 255/255, green: 120/255, blue: 104/255, alpha: 1)
         for button in nameButtons {
-            if button.title(for: .normal) == dataModel.currentPokemon.name {
+            if button.title(for: .normal) == dataModel.currentPokemon.value.name {
                 button.backgroundColor = UIColor(colorLiteralRed: 142/255, green: 212/255, blue: 53/255, alpha: 1)
             }
         }
         
         backImage.frame = frontImage.frame
-
+        
         UIView.transition(from: frontImage, to: backImage, duration: 0.5, options: .transitionFlipFromLeft) { [unowned self] _ in
             self.cardHolderView.sendSubview(toBack: self.backImage)
             self.nameLabel.isHidden = false
@@ -79,7 +97,7 @@ class PlayViewController: UIViewController {
             self.view.layoutIfNeeded()
             
             for btn in self.nameButtons { btn.isHidden = true }
-        
+            
             UIView.animate(withDuration: 0.5, delay: 0.5, options: .curveEaseInOut, animations: { [weak self] in
                 guard self != nil else { return }
                 self!.cardHolderCenterConstraint.constant = -self!.view.frame.width / 2 - self!.cardHolderView.frame.width / 2
@@ -98,20 +116,20 @@ class PlayViewController: UIViewController {
                     self?.view.isUserInteractionEnabled = true
                     for btn in self!.nameButtons { btn.isHidden = false }
                 }
-            }   
+            }
         }
     }
     
-    func setupImage() {
+    func setupImage(_ pokemon: Pokemon) {
         for sub in cardHolderView.subviews where sub !== nameLabel { sub.removeFromSuperview() }
-        frontImage.image = UIImage(named: dataModel.currentPokemon.img)!.withRenderingMode(.alwaysTemplate)
+        frontImage.image = UIImage(named: pokemon.img)!.withRenderingMode(.alwaysTemplate)
         frontImage.tintColor = .black
         frontImage.backgroundColor = .white
         frontImage.contentMode = .scaleAspectFit
         frontImage.cornerRadius = 20
         frontImage.translatesAutoresizingMaskIntoConstraints = false
         
-        backImage.image = UIImage(named: dataModel.currentPokemon.img)
+        backImage.image = UIImage(named: pokemon.img)
         backImage.backgroundColor = .white
         backImage.contentMode = .scaleAspectFit
         backImage.cornerRadius = 20
@@ -120,47 +138,74 @@ class PlayViewController: UIViewController {
         frontImage.createAnchorsToFitWith(other: cardHolderView)
     }
     
+    func setUpProgressView() {
+        dataModel
+            .elapsedPercent
+            .asObservable()
+            .bindTo(progressView
+                .rx
+                .percent)
+            .addDisposableTo(disposeBag)
+    }
+    
+    func setUpPokemon() {
+        dataModel.currentPokemon.asObservable()
+            .subscribe(onNext: { [unowned self] pkm in
+                self.setUpLabel(pkm)
+                self.setupImage(pkm)
+            })
+            .addDisposableTo(disposeBag)
+    }
+    
     func startCounting() {
-        gameTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] timer in
-            guard self != nil else {
-                timer.invalidate()
-                return
-            }
-            if self!.dataModel.currentTime <= 0 {
-                timer.invalidate()
-                let ac = UIAlertController(title: "Time's up", message: "Score: \(self!.dataModel.score)", preferredStyle: .alert)
+        let interval: Double = 0.2
+        
+        let timer = Observable<Int>.interval(interval, scheduler: ConcurrentMainScheduler.instance)
+            .observeOn(MainScheduler.instance)
+            .do(onNext: { [weak self]_ in
+                self?.dataModel.currentTime.value -= CGFloat(interval)
+            })
+            .do(onDispose: { [weak self] in
+                let ac = UIAlertController(title: "Time's up", message: "Score: \(self!.dataModel.score.value)", preferredStyle: .alert)
                 let ok = UIAlertAction(title: "Okay", style: .default) { _ in
                     SoundManager.shared.click.play()
-                    GameStats.shared.highScore = self!.dataModel.score
-                    self!.performSegue(withIdentifier: "unwind", sender: nil)
+                    GameStats.shared.highScore = self!.dataModel.score.value
+                    self?.performSegue(withIdentifier: "unwind", sender: nil)
                 }
                 ac.addAction(ok)
-                self!.present(ac, animated: true)
-                return
-            }
-            self!.dataModel.currentTime -= 1
-            self!.progressView.progressPercentage = self!.dataModel.elapsedPercent
-            self!.progressView.setNeedsDisplay()
+                self?.present(ac, animated: true)
+            })
+            .subscribe()
+        
+        dataModel.currentTime
+            .asObservable()
+            .subscribe(onNext: {
+                if $0 <= 0 { timer.dispose() }
+            })
+            .addDisposableTo(disposeBag)
+    }
+    
+    
+    func setUpLabel(_ pokemon: Pokemon) {
+        nameButtons.forEach { $0.backgroundColor = .white }
+        
+        nameLabel.isHidden = true
+        nameLabel.text = pokemon.tag + "-" + pokemon.name
+        
+        view.backgroundColor = UIColor(pokemon.color)
+        
+        for i in 0 ..< nameButtons.count {
+            nameButtons[i].setTitle(dataModel.currentAnswers[i], for: .normal)
         }
     }
     
     func newPokemon() {
         dataModel.getNewPokemon()
-        
-        for btn in nameButtons { btn.backgroundColor = .white }
-        
-        nameLabel.isHidden = true
-        nameLabel.text = dataModel.currentPokemon.tag + "-" + dataModel.currentPokemon.name
-        
-        view.backgroundColor = UIColor(dataModel.currentPokemon.color)
-        
-        for i in 0 ..< nameButtons.count {
-            nameButtons[i].setTitle(dataModel.currentAnswers[i], for: .normal)
-        }
-        setupImage()
     }
     
     @IBAction func clickedBackButton(_ sender: UIButton) {
         SoundManager.shared.click.play()
     }
 }
+
+

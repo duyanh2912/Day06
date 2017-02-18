@@ -1,0 +1,6 @@
+framework module Pods_CustomDrawing {
+  umbrella header "Pods-CustomDrawing-umbrella.h"
+
+  export *
+  module * { export * }
+}

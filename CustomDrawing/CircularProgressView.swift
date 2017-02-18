@@ -6,8 +6,9 @@
 //  Copyright © 2017 Duy Anh. All rights reserved.
 //
 
-import UIKit
 import Utils
+import RxCocoa
+import RxSwift
 
 @IBDesignable
 public class CircularProgressView: UIView {
@@ -32,5 +33,14 @@ public class CircularProgressView: UIView {
         arc.addArc(withCenter: rect.center, radius: edge / 2, startAngle: -CGFloat.pi/2, endAngle: progressPercentage / 100 * CGFloat.pi * 2 - CGFloat.pi/2, clockwise: true)
         filledColor.setFill()
         arc.fill()
+    }
+}
+
+extension Reactive where Base: CircularProgressView {
+    public var percent: UIBindingObserver<Base, CGFloat> {
+        return UIBindingObserver(UIElement: self.base) { view, percent in
+            view.progressPercentage = percent
+            view.setNeedsDisplay()
+        }
     }
 }

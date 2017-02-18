@@ -22,12 +22,27 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         SoundManager.shared.click.play()
+        if let vc = segue.destination as? PlayViewController {
+            vc.transitioningDelegate = self
+        }
     }
     
     @IBAction func unwindToBase(segue: UIStoryboardSegue) {
         if segue.source is SettingViewController {
             SoundManager.shared.click.play()
         }
+    }
+}
+
+extension ViewController: UIViewControllerTransitioningDelegate {
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return CustomAnimator()
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        let animator = CustomAnimator()
+        animator.presenting = false
+        return animator
     }
 }
 
